@@ -5,6 +5,7 @@
 2. results/akgol_scenes.csv: water surface of Akgol in every valid Landsat scene (NDWI > 0), from
    <ROOT>/landsat/scenes.csv; Landsat Collection 2 is public domain, so the per-scene areas are committed.
 3. figures/doc_fill.png: figure 1 as PNG.
+4. results/doc_figure_akgol_scenes.csv: rows of figure 2 (date, decimal year, water surface in ha).
 Usage: python pipeline/99_doc_figures.py <ROOT>
 """
 import json
@@ -26,6 +27,12 @@ s = s[(s.site == "akgol") & s["water_ha_ndwi_+0.0"].notna()].copy()
 s["date"] = s.datetime.str[:10]
 s = s.sort_values("date")[["date", "scene", "platform", "valid_share", "water_ha_ndwi_-0.1", "water_ha_ndwi_+0.0", "water_ha_ndwi_+0.1"]]
 s.to_csv("results/akgol_scenes.csv", index=False)
+# rows of figure 2 (Akgol, every valid scene, beside the paper's four values): date as a decimal year and the area
+s2 = s[["date", "water_ha_ndwi_+0.0"]].rename(columns={"water_ha_ndwi_+0.0": "water_ha"})
+d = pd.to_datetime(s2.date)
+s2.insert(1, "t", (d.dt.year + (d.dt.dayofyear - 1) / 365.25).round(3))
+s2["water_ha"] = s2.water_ha.round(1)
+s2.to_csv("results/doc_figure_akgol_scenes.csv", index=False)
 print(len(rows), "fill rows;", len(s), "Akgol scenes")
 
 # The country-file figure as PNG, drawn from the same rows (the country file draws it live from them).
