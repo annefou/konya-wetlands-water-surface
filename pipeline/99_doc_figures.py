@@ -14,7 +14,7 @@ import pandas as pd
 ROOT = sys.argv[1]
 NAMES = {"akgol": "Akgöl", "hotamis": "Hotamış", "meke": "Meke (Ramsar)", "meyil": "Meyil", "bolluk": "Bolluk",
          "acigol_k": "Acıgöl–Karapınar (control)"}
-COLLAPSED = {"akgol", "hotamis", "meke"}
+COLLAPSED = {"akgol", "hotamis", "meke", "meyil"}   # did not fill in any year of the 2020s (results/fill_by_decade.csv)
 sy = pd.read_csv("results/site_years.csv").dropna(subset=["spring_max_ha", "ref_spring_ha"])
 rows = [{"site": NAMES[r.site], "year": int(r.year), "pct": round(min(100 * r.spring_max_ha / r.ref_spring_ha, 200), 1),
          "collapsed": int(r.site in COLLAPSED), "order": list(NAMES).index(r.site)} for r in sy.itertuples()]
