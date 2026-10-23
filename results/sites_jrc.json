@@ -1,0 +1,177 @@
+{
+ "source": "JRC Global Surface Water v1.4 (1984-2021), tile 30E_40N",
+ "healpix_depth": 17,
+ "cell_area_ha": 0.24741438960777226,
+ "sites": {
+  "akgol": {
+   "name": "Akg\u00f6l (Ere\u011fli)",
+   "why": "Musao\u011flu et al. 2018: 2958.4 ha (1987) -> 117.2 ha (2017)",
+   "seed": [
+    33.758,
+    37.521
+   ],
+   "jrc_max_extent_ha": 3570.6,
+   "jrc_permanent_ha_occ_ge90": 0.0,
+   "jrc_mean_occurrence_pct": 5.7,
+   "jrc_transitions_ha": {
+    "lost permanent": 845.3,
+    "seasonal": 425.3,
+    "new seasonal": 83.2,
+    "lost seasonal": 2129.5,
+    "permanent to seasonal": 13.8,
+    "ephemeral permanent": 2.8,
+    "ephemeral seasonal": 68.0
+   },
+   "healpix_cells": 22539,
+   "healpix_area_ha": 5576.5,
+   "bbox": [
+    33.6833,
+    37.4725,
+    33.8278,
+    37.546
+   ]
+  },
+  "hotamis": {
+   "name": "Hotam\u0131\u015f (\u00c7umra)",
+   "why": "Konya Closed Basin wetland",
+   "seed": [
+    33.052,
+    37.557
+   ],
+   "jrc_max_extent_ha": 2289.8,
+   "jrc_permanent_ha_occ_ge90": 0.0,
+   "jrc_mean_occurrence_pct": 3.9,
+   "jrc_transitions_ha": {
+    "new permanent": 2.9,
+    "lost permanent": 545.3,
+    "seasonal": 142.1,
+    "new seasonal": 55.4,
+    "lost seasonal": 947.1,
+    "seasonal to permanent": 9.4,
+    "permanent to seasonal": 41.4,
+    "ephemeral permanent": 2.6,
+    "ephemeral seasonal": 543.4
+   },
+   "healpix_cells": 14042,
+   "healpix_area_ha": 3474.2,
+   "bbox": [
+    33.0245,
+    37.493,
+    33.0898,
+    37.589
+   ]
+  },
+  "meke": {
+   "name": "Meke (Karap\u0131nar)",
+   "why": "Ramsar site (2005), crater lake",
+   "seed": [
+    33.64,
+    37.685
+   ],
+   "jrc_max_extent_ha": 64.0,
+   "jrc_permanent_ha_occ_ge90": 0.0,
+   "jrc_mean_occurrence_pct": 33.7,
+   "jrc_transitions_ha": {
+    "lost permanent": 43.9,
+    "new seasonal": 0.1,
+    "lost seasonal": 6.9,
+    "permanent to seasonal": 1.9,
+    "ephemeral permanent": 0.8,
+    "ephemeral seasonal": 9.2
+   },
+   "healpix_cells": 952,
+   "healpix_area_ha": 235.5,
+   "bbox": [
+    33.631,
+    37.6763,
+    33.6498,
+    37.6935
+   ]
+  },
+  "acigol_k": {
+   "name": "Ac\u0131g\u00f6l (Karap\u0131nar)",
+   "why": "crater lake, reference for a stable lake",
+   "seed": [
+    33.666,
+    37.713
+   ],
+   "jrc_max_extent_ha": 111.1,
+   "jrc_permanent_ha_occ_ge90": 96.6,
+   "jrc_mean_occurrence_pct": 90.2,
+   "jrc_transitions_ha": {
+    "permanent": 99.0,
+    "lost permanent": 1.1,
+    "seasonal": 1.1,
+    "new seasonal": 2.0,
+    "lost seasonal": 1.5,
+    "permanent to seasonal": 3.8,
+    "ephemeral permanent": 0.1,
+    "ephemeral seasonal": 2.4
+   },
+   "healpix_cells": 968,
+   "healpix_area_ha": 239.5,
+   "bbox": [
+    33.6557,
+    37.706,
+    33.6765,
+    37.721
+   ]
+  },
+  "meyil": {
+   "name": "Meyil (Karatay)",
+   "why": "ciliate survey by \u00c7apar Din\u00e7er (Hacettepe), 2013-2014",
+   "seed": [
+    33.354,
+    37.988
+   ],
+   "jrc_max_extent_ha": 8.5,
+   "jrc_permanent_ha_occ_ge90": 2.0,
+   "jrc_mean_occurrence_pct": 47.8,
+   "jrc_transitions_ha": {
+    "permanent": 2.0,
+    "lost permanent": 2.9,
+    "lost seasonal": 2.5,
+    "permanent to seasonal": 1.2
+   },
+   "healpix_cells": 229,
+   "healpix_area_ha": 56.7,
+   "bbox": [
+    33.349,
+    37.984,
+    33.358,
+    37.992
+   ]
+  },
+  "bolluk": {
+   "name": "Bolluk (Cihanbeyli)",
+   "why": "ciliate survey by \u00c7apar Din\u00e7er (Hacettepe), 2013-2014",
+   "seed": [
+    32.934,
+    38.54
+   ],
+   "jrc_max_extent_ha": 1152.0,
+   "jrc_permanent_ha_occ_ge90": 0.0,
+   "jrc_mean_occurrence_pct": 41.9,
+   "jrc_transitions_ha": {
+    "permanent": 93.8,
+    "new permanent": 1.6,
+    "lost permanent": 18.7,
+    "seasonal": 455.1,
+    "new seasonal": 7.4,
+    "lost seasonal": 265.6,
+    "seasonal to permanent": 18.9,
+    "permanent to seasonal": 260.3,
+    "ephemeral permanent": 1.3,
+    "ephemeral seasonal": 29.1
+   },
+   "healpix_cells": 7328,
+   "healpix_area_ha": 1813.1,
+   "bbox": [
+    32.8948,
+    38.4932,
+    32.9522,
+    38.5585
+   ]
+  }
+ }
+}

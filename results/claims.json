@@ -1,0 +1,170 @@
+{
+ "C1_akgol_paper_years": [
+  {
+   "year": 1987,
+   "paper_ha": 2958.4,
+   "n_scenes": 3,
+   "min_ha": 1920.18,
+   "median_ha": 2999.4,
+   "max_ha": 3938.59,
+   "closest_date": "1987-06-09",
+   "closest_ha": 2999.4,
+   "paper_within_range": true,
+   "spread_thr_-0.1_+0.1_at_closest": [
+    3504.87,
+    2536.0
+   ]
+  },
+  {
+   "year": 1998,
+   "paper_ha": 1153.9,
+   "n_scenes": 6,
+   "min_ha": 44.78,
+   "median_ha": 189.39499999999998,
+   "max_ha": 730.86,
+   "closest_date": "1998-06-07",
+   "closest_ha": 730.86,
+   "paper_within_range": false,
+   "spread_thr_-0.1_+0.1_at_closest": [
+    1086.64,
+    582.66
+   ]
+  },
+  {
+   "year": 2007,
+   "paper_ha": 12.7,
+   "n_scenes": 8,
+   "min_ha": 0.0,
+   "median_ha": 0.245,
+   "max_ha": 19.3,
+   "closest_date": "2007-05-15",
+   "closest_ha": 19.3,
+   "paper_within_range": true,
+   "spread_thr_-0.1_+0.1_at_closest": [
+    100.95,
+    10.39
+   ]
+  },
+  {
+   "year": 2017,
+   "paper_ha": 117.2,
+   "n_scenes": 13,
+   "min_ha": 0.0,
+   "median_ha": 42.31,
+   "max_ha": 420.85,
+   "closest_date": "2017-06-11",
+   "closest_ha": 128.66,
+   "paper_within_range": true,
+   "spread_thr_-0.1_+0.1_at_closest": [
+    169.73,
+    103.67
+   ]
+  }
+ ],
+ "C2_drying": {
+  "acigol_k": {
+   "median_doy_1996_2000": 145.0,
+   "median_doy_2016_2020": 366.0,
+   "change_days": 221.0,
+   "theil_sen_days_per_decade": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "years_used": 41
+  },
+  "akgol": {
+   "median_doy_1996_2000": 164.0,
+   "median_doy_2016_2020": 165.0,
+   "change_days": 1.0,
+   "theil_sen_days_per_decade": -41.4,
+   "ci95": [
+    -67.9,
+    -21.0
+   ],
+   "years_used": 39
+  },
+  "bolluk": {
+   "median_doy_1996_2000": 149.5,
+   "median_doy_2016_2020": 366.0,
+   "change_days": 216.5,
+   "theil_sen_days_per_decade": 0.0,
+   "ci95": [
+    -52.2,
+    34.3
+   ],
+   "years_used": 21
+  },
+  "hotamis": {
+   "median_doy_1996_2000": 121.0,
+   "median_doy_2016_2020": 119.0,
+   "change_days": -2.0,
+   "theil_sen_days_per_decade": -25.6,
+   "ci95": [
+    -51.9,
+    -9.2
+   ],
+   "years_used": 41
+  },
+  "meke": {
+   "median_doy_1996_2000": 145.0,
+   "median_doy_2016_2020": 165.0,
+   "change_days": 20.0,
+   "theil_sen_days_per_decade": -58.3,
+   "ci95": [
+    -77.3,
+    -9.1
+   ],
+   "years_used": 41
+  },
+  "meyil": {
+   "median_doy_1996_2000": 107.0,
+   "median_doy_2016_2020": 139.0,
+   "change_days": 32.0,
+   "theil_sen_days_per_decade": 0.4,
+   "ci95": [
+    -8.2,
+    12.0
+   ],
+   "years_used": 41
+  }
+ },
+ "series": {
+  "acigol_k": {
+   "years": 41,
+   "scenes": 495,
+   "spring_max_1984_1995_median_ha": 108.9,
+   "spring_max_2015_2025_median_ha": 97.2
+  },
+  "akgol": {
+   "years": 41,
+   "scenes": 455,
+   "spring_max_1984_1995_median_ha": 3435.95,
+   "spring_max_2015_2025_median_ha": 282.3
+  },
+  "bolluk": {
+   "years": 31,
+   "scenes": 135,
+   "spring_max_1984_1995_median_ha": 1050.15,
+   "spring_max_2015_2025_median_ha": 215.2
+  },
+  "hotamis": {
+   "years": 41,
+   "scenes": 959,
+   "spring_max_1984_1995_median_ha": 1217.4,
+   "spring_max_2015_2025_median_ha": 24.5
+  },
+  "meke": {
+   "years": 41,
+   "scenes": 548,
+   "spring_max_1984_1995_median_ha": 52.6,
+   "spring_max_2015_2025_median_ha": 2.2
+  },
+  "meyil": {
+   "years": 41,
+   "scenes": 1427,
+   "spring_max_1984_1995_median_ha": 6.7,
+   "spring_max_2015_2025_median_ha": 1.7
+  }
+ }
+}

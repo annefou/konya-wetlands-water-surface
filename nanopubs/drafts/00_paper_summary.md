@@ -2,13 +2,13 @@
 
 > This is a working scratchpad for the paper-analysis phase. The output of this file feeds the Quote / AIDA / Claim drafts. It is not itself a nanopub.
 
-**Reference paper:** {{PAPER_TITLE}}
+**Reference paper:** Long-Term Monitoring of Wetlands via Remote Sensing and GIS: A Case Study from Turkey
 
-**DOI:** {{PAPER_DOI}}
+**DOI:** 10.17501/iccc.2018.2102
 
 **Authors:** _add._
 
-**Year:** {{PAPER_YEAR}}
+**Year:** 2018
 
 ## Headline claim
 

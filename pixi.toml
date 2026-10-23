@@ -8,7 +8,7 @@
 # this file; commit both files in the same commit.
 
 [workspace]
-name = "{{REPO_NAME}}"
+name = "konya-wetlands-water-surface"
 # bioconda hosts snakemake (and downstream rule-engine ecosystem); conda-forge
 # is the priority channel for everything else.
 channels = ["conda-forge", "bioconda"]
@@ -33,27 +33,21 @@ nbclient = "*"
 ipykernel = "*"
 # --- pipeline driver ---
 snakemake = "*"
-# --- replace/extend with the deps your replication needs ---
-# Examples (uncomment as needed):
-# statsmodels = "*"          # GLM/GLMM regression
-# scikit-learn = "*"         # classical ML
-# pyproj = "*"               # CRS + map projections
-# cartopy = "*"              # geographic plotting
-# netcdf4 = "*"              # NetCDF I/O — preferred over .npz for arrays (see DOMAIN.md)
-# zarr = "*"                 # Zarr — preferred for arrays >2 GB or cloud-archived (see DOMAIN.md)
-# cdsapi = "*"               # Copernicus Climate Data Store
-# copernicusmarine = "*"     # Copernicus Marine Service
-# healpix-geo = "*"          # HEALPix on geo data — preferred (use nest=True — see DOMAIN.md)
-# healpy = "*"               # HEALPix on pure-sphere (astrophysics) only
-# rasterio = "*"             # raster I/O
-# geopandas = "*"            # vector I/O
-# dask = "*"                 # out-of-core / parallel
+# --- this replication ---
+pyproj = "*"
+rasterio = "*"               # Landsat / Sentinel-2 COGs and JRC Global Surface Water tiles (windowed HTTP reads)
+geopandas = ">=1.0"
+pyogrio = "*"
+shapely = ">=2.0"
+pystac-client = "*"          # Planetary Computer and Earth Search STAC
+planetary-computer = "*"     # anonymous URL signing for Landsat Collection 2 on Planetary Computer
+healpix-geo = ">=0.4.1"      # HEALPix on the WGS84 ellipsoid, NESTED
+pytorch-cpu = "*"            # backend of healpix-resample
+requests = "*"
+statsmodels = "*"            # trend tests
 
-# Pip-only deps go in [pypi-dependencies]. Conda-forge is preferred where available.
-# [pypi-dependencies]
-# pygbif = "*"               # GBIF occurrences
-# polytope-client = "*"      # Destination Earth Climate DT
-# earthkit-data = "*"
+[pypi-dependencies]
+healpix-resample = "*"       # GRID4EARTH resamplers (conservative bilinear onto HEALPix)
 
 [feature.docs.dependencies]
 mystmd = "*"
@@ -76,6 +70,9 @@ tests = { features = ["tests"], solve-group = "default" }
 
 [tasks]
 run = "snakemake --cores 1"
+aoi = "python pipeline/00_aoi.py work"
+landsat = "python pipeline/01_landsat_scenes.py work"
+analyse = "python pipeline/02_analyse.py work"
 book = "myst build --html"
 lab = "jupyter lab"
 

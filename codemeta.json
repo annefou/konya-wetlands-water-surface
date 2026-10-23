@@ -1,13 +1,13 @@
 {
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
-  "name": "{{REPO_NAME}}",
-  "description": "{{REPO_DESCRIPTION}}",
+  "name": "konya-wetlands-water-surface",
+  "description": "Water surface of Konya Closed Basin wetlands (Akgöl, Acıgöl) 1984–2025: replication of Musaoğlu et al. 2018 with every Landsat scene on HEALPix (healpix-geo, WGS84), tested against JRC Global Surface Water. DRAFT, not reviewed.",
   "version": "0.1.0",
-  "dateCreated": "{{RELEASE_DATE}}",
-  "dateModified": "{{RELEASE_DATE}}",
+  "dateCreated": "2026-10-23",
+  "dateModified": "2026-10-23",
   "license": "https://spdx.org/licenses/MIT",
-  "codeRepository": "https://github.com/{{REPO_ORG}}/{{REPO_NAME}}",
+  "codeRepository": "https://github.com/annefou/konya-wetlands-water-surface",
   "identifier": "{{ZENODO_DOI}}",
   "@id": "{{ZENODO_DOI}}",
   "programmingLanguage": {
@@ -19,12 +19,12 @@
   "author": [
     {
       "@type": "Person",
-      "givenName": "{{AUTHOR_GIVEN}}",
-      "familyName": "{{AUTHOR_FAMILY}}",
-      "@id": "{{AUTHOR_ORCID}}",
+      "givenName": "Anne",
+      "familyName": "Fouilloux",
+      "@id": "https://orcid.org/0000-0002-1784-2920",
       "affiliation": {
         "@type": "Organization",
-        "name": "{{AUTHOR_AFFILIATION}}"
+        "name": "LifeWatch ERIC"
       }
     }
   ],
@@ -37,9 +37,9 @@
   ],
   "referencePublication": {
     "@type": "ScholarlyArticle",
-    "name": "{{PAPER_TITLE}}",
-    "datePublished": "{{PAPER_YEAR}}",
-    "@id": "https://doi.org/{{PAPER_DOI}}"
+    "name": "Long-Term Monitoring of Wetlands via Remote Sensing and GIS: A Case Study from Turkey",
+    "datePublished": "2018",
+    "@id": "https://doi.org/10.17501/iccc.2018.2102"
   },
   "isPartOf": {
     "@type": "Organization",

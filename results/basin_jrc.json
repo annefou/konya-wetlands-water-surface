@@ -1,0 +1,29 @@
+{
+ "basin": "HydroBASINS lev04 HYBAS_ID 2040085960",
+ "basin_area_km2": 58374,
+ "jrc_classes_km2": {
+  "permanent": 680.3,
+  "new permanent": 19.4,
+  "lost permanent": 270.3,
+  "seasonal": 942.9,
+  "new seasonal": 235.0,
+  "lost seasonal": 491.8,
+  "seasonal to permanent": 14.8,
+  "permanent to seasonal": 140.4,
+  "ephemeral permanent": 7.0,
+  "ephemeral seasonal": 158.4
+ },
+ "water_1984_km2": 2540.5,
+ "water_2021_km2": 2032.7,
+ "change_pct": -20.0,
+ "without_tuz_golu": {
+  "water_1984_km2": 1477.0,
+  "water_2021_km2": 879.9,
+  "change_pct": -40.4
+ },
+ "healpix_check_km2": {
+  "first": 2540.5,
+  "last": 2032.7
+ },
+ "paper_claim": "about -23.5 % (Musaoglu et al. 2018, Landsat 1987-2017, 16 water bodies)"
+}

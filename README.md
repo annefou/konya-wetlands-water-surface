@@ -1,30 +1,66 @@
-# {{REPO_NAME}}
+# konya-wetlands-water-surface
 
-[![CI](https://github.com/{{REPO_ORG}}/{{REPO_NAME}}/actions/workflows/ci.yml/badge.svg)](https://github.com/{{REPO_ORG}}/{{REPO_NAME}}/actions/workflows/ci.yml)
-[![Jupyter Book](https://github.com/{{REPO_ORG}}/{{REPO_NAME}}/actions/workflows/jupyter-book.yml/badge.svg)](https://{{REPO_ORG}}.github.io/{{REPO_NAME}}/)
-[![Docker](https://github.com/{{REPO_ORG}}/{{REPO_NAME}}/actions/workflows/docker.yml/badge.svg)](https://github.com/{{REPO_ORG}}/{{REPO_NAME}}/pkgs/container/{{REPO_NAME}})
+[![CI](https://github.com/annefou/konya-wetlands-water-surface/actions/workflows/ci.yml/badge.svg)](https://github.com/annefou/konya-wetlands-water-surface/actions/workflows/ci.yml)
+[![Jupyter Book](https://github.com/annefou/konya-wetlands-water-surface/actions/workflows/jupyter-book.yml/badge.svg)](https://annefou.github.io/konya-wetlands-water-surface/)
+[![Docker](https://github.com/annefou/konya-wetlands-water-surface/actions/workflows/docker.yml/badge.svg)](https://github.com/annefou/konya-wetlands-water-surface/pkgs/container/konya-wetlands-water-surface)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/{{ZENODO_DOI}}.svg)]({{ZENODO_DOI}})
 [![FAIR4RS](https://img.shields.io/badge/FAIR4RS-conformant-brightgreen)](docs/fair4rs-checklist.md)
 [![FORRT](https://img.shields.io/badge/FORRT-replication-blue)](https://forrt.org/)
 [![Science Live](https://img.shields.io/badge/Science%20Live-nanopub%20chain-purple)](nanopubs/PUBLISHED.md)
 [![RO-Crate](https://img.shields.io/badge/RO--Crate-1.2-orange)](ro-crate-metadata.json)
-[![Software Heritage](https://archive.softwareheritage.org/badge/origin/https://github.com/{{REPO_ORG}}/{{REPO_NAME}}/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/{{REPO_ORG}}/{{REPO_NAME}})
+[![Software Heritage](https://archive.softwareheritage.org/badge/origin/https://github.com/annefou/konya-wetlands-water-surface/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/annefou/konya-wetlands-water-surface)
 
-> **{{PAPER_TITLE}}** — replication study.
-> Reference paper: [{{PAPER_DOI}}](https://doi.org/{{PAPER_DOI}})
+> **Long-Term Monitoring of Wetlands via Remote Sensing and GIS: A Case Study from Turkey** — replication study.
+> Reference paper: [10.17501/iccc.2018.2102](https://doi.org/10.17501/iccc.2018.2102)
 
-This is a self-contained replication of the headline claim of the reference paper. It produces a reproducible computational pipeline, a Zenodo-archived release with a citable DOI, and a FORRT-tagged nanopublication chain on the [Science Live platform](https://platform.sciencelive4all.org).
+**DRAFT, not reviewed.** LifeWatch ERIC feasibility test prepared for the meeting with HUBIOM (Hacettepe University) on 30 October 2026. Our reading of the published work, open to correction by the authors.
+
+### Claims tested
+
+| Claim | Source | Our test |
+| --- | --- | --- |
+| C1. Akgöl water surface 2958.4 ha (1987), 1153.9 (1998), 12.7 (2007), 117.2 (2017); about -96 % | Musaoğlu et al. 2018, one Landsat image per year, NDWI | Every valid Landsat scene of those years, same index |
+| C2. Konya Closed Basin water bodies about -23.5 % over 30 years | Musaoğlu et al. 2018 | JRC Global Surface Water transitions 1984-2021 over the HydroBASINS endorheic basin |
+| C3. Wetlands dry earlier in the season (1998-2018) | Özgencil et al. 2025, [doi:10.1080/20442041.2025.2488655](https://doi.org/10.1080/20442041.2025.2488655) | Share of years each wetland still fills in spring, per decade, 1984-2025 |
+
+### Results (23 October 2026)
+
+- **C1 reproduced for 1987, 2007 and 2017**: the scene closest to the paper's value is 2999 ha on 9 June 1987 (paper 2958.4), 19.3 ha on 15 May 2007 (12.7), 128.7 ha on 11 June 2017 (117.2). For 1998 our valid scenes peak at 731 ha (1087 ha at NDWI > -0.1), below the paper's 1153.9 ha. One image per year hides a two-fold seasonal range: 3,939 ha on 22 April and 1,920 ha on 27 July 1987.
+- **C2 consistent**: JRC water 2,540 km2 (1984) -> 2,033 km2 (2021), **-20.0 %**; without Tuz Gölü, **-40.4 %** (1,477 -> 880 km2). Tuz Gölü, a shallow salt lake holding 40 % of the basin's water, hides the loss of the freshwater lakes and wetlands.
+- **C3 supported, in a stronger form**: Akgöl filled every spring in the 1980s, half of them in the 1990s, never since 2000 (spring maximum 3,436 -> 282 ha, 1984-95 vs 2015-25 medians). Hotamış 1,217 -> 25 ha; Meke (Ramsar) 53 -> 2 ha and did not fill in any year of the 2020s; Meyil 6.7 -> 1.2 ha. The crater lake Acıgöl (Karapınar) is stable (109 -> 97 ha) and serves as a control.
+
+Figures: [Akgöl, every scene](figures/akgol_scenes.png) · [spring and summer per site](figures/sites_spring_summer.png) · [drying date](figures/sites_drying_doy.png). Tables: `results/`.
+
+### Method
+
+- Landsat Collection 2 Level-2 (Landsat 5, 7, 8, 9) from Microsoft Planetary Computer, anonymous access. Each scene: green, NIR and QA_PIXEL read for the site window; cloud, shadow, snow and fill masked; green and NIR resampled onto HEALPix cells (depth 17, ~49 m, [healpix-geo](https://github.com/GRID4EARTH/healpix-geo) on the WGS84 ellipsoid, NESTED) with [healpix-resample](https://github.com/GRID4EARTH/healpix-resample) (conservative bilinear) **before** NDWI and its threshold (NDWI > 0; -0.1 and +0.1 as sensitivity). A scene counts for a site when at least 95 % of its cells are valid.
+- Site outlines: JRC Global Surface Water v1.4 maximum extent around seed points checked on OpenStreetMap.
+- Basin: HydroBASINS level 4, endorheic basin 2040085960 (58,374 km2).
+
+### Limits
+
+- The paper's image dates are not stated; we compare with the range of all valid scenes in each year.
+- 2012-2013 has no valid scenes (end of Landsat 5, before Landsat 8; Landsat 7 scan-line gaps fail the 95 % rule). Two 2022 scenes could not be read and are excluded.
+- NDWI on salt crust and on shallow turbid water is uncertain; Tuz Gölü is separated with a 0.45 deg circle.
+- Water surface only: no depth, salinity or ecological condition.
+
+### Data
+
+Landsat (USGS, public domain), JRC Global Surface Water (CC BY 4.0), HydroBASINS (CC BY 4.0), OpenStreetMap (ODbL, seed points only). Only code, plots and summary statistics are in this repository; inputs are fetched by the pipeline.
 
 ---
 
 ## Quick start
 
 ```bash
-git clone https://github.com/{{REPO_ORG}}/{{REPO_NAME}}.git
-cd {{REPO_NAME}}
+git clone https://github.com/annefou/konya-wetlands-water-surface.git
+cd konya-wetlands-water-surface
 pixi install
-pixi run snakemake --cores 1
+pixi run aoi                  # site outlines and JRC reference (results/sites_jrc.json)
+pixi run landsat              # every Landsat scene 1984-2025 (resumable, about 40 min)
+pixi run analyse              # claims C1 and C3, figures
+pixi run python pipeline/03_basin_jrc.py work     # claim C2 (needs work/basin/hybas_eu_lev04.zip from data.hydrosheds.org)
 ```
 
 (Pixi resolves `pixi.toml` against the per-platform `pixi.lock`, installs the env under `.pixi/`, and provides `pixi run` for any task without needing an `activate` step.)
@@ -32,10 +68,10 @@ pixi run snakemake --cores 1
 Or with Docker:
 
 ```bash
-docker run --rm ghcr.io/{{REPO_ORG}}/{{REPO_NAME}}:latest
+docker run --rm ghcr.io/annefou/konya-wetlands-water-surface:latest
 ```
 
-The Jupyter Book version is at <https://{{REPO_ORG}}.github.io/{{REPO_NAME}}/>.
+The Jupyter Book version is at <https://annefou.github.io/konya-wetlands-water-surface/>.
 
 ## Built from a template
 
@@ -117,7 +153,7 @@ For lower-level nanopub work — retraction, superseding, batch publishing — s
 If you use this work, please cite both:
 
 - This software: [`CITATION.cff`](CITATION.cff) → DOI [{{ZENODO_DOI}}]({{ZENODO_DOI}})
-- The original paper: [{{PAPER_DOI}}](https://doi.org/{{PAPER_DOI}})
+- The original paper: [10.17501/iccc.2018.2102](https://doi.org/10.17501/iccc.2018.2102)
 
 ## Acknowledgements
 
