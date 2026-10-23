@@ -5,7 +5,8 @@ C1 (Musaoglu et al. 2018) Akgol water surface 2958.4 ha (1987), 1153.9 ha (1998)
    their range, and the scene closest to it.
 C2 (Ozgencil et al. 2025) wetlands dry earlier in the season over 1998-2018: per site and year, the drying
    date = first valid scene after day 100 whose water area is at most 10 % of the site's reference spring
-   area (median of April-May scenes, 1984-1995); years in which the site never falls that low are kept as
+   area (median over 1984-1995 of each year's spring maximum, March-June; a median of single scenes is
+   dragged down where NDWI misses bright or turbid water, e.g. the crater lakes Meyil and Acigol); years in which the site never falls that low are kept as
    "not dry" (censored at day 366). Compared as medians of 1996-2000 against 2016-2020, plus a Theil-Sen
    slope over all years.
 Also per site and year: spring maximum (March-June) and late-summer median (July-September).
@@ -45,7 +46,8 @@ def load():
 def drying(d):
     rows = []
     for site, g in d.groupby("site"):
-        ref = g[(g.year <= 1995) & g.date.dt.month.isin([4, 5])][COL].median()
+        early = g[(g.year <= 1995) & g.date.dt.month.isin([3, 4, 5, 6])]
+        ref = early.groupby("year")[COL].max().median()
         for y, gy in g.groupby("year"):
             spring = gy[gy.date.dt.month.isin([3, 4, 5, 6])][COL]
             summer = gy[gy.date.dt.month.isin([7, 8, 9])][COL]
