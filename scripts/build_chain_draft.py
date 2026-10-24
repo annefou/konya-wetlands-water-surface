@@ -836,6 +836,14 @@ def build_step(step: str, spec: dict, registry_meta: dict, cff: dict,
                 prefill[name] = val
                 provenance[name] = prov
 
+    # A synthesis over several chains: the Outcomes of the chains published
+    # earlier are listed in the draft; the wizard appends this chain's own.
+    if step == "08_synthesis" and draft_text:
+        urls = draft_urls(draft_text, DRAFT_HEADING_ALIAS[("08_synthesis", "source")])
+        if urls:
+            prefill["sources"] = [{"source": u} for u in urls]
+            provenance["sources"] = f"{drafts_label}/{step}.md (+ carried 05_outcome)"
+
     return _finish(step, registry_meta, prefill, provenance, manual, published_uri)
 
 

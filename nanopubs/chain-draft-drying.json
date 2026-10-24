@@ -4,7 +4,7 @@
   "chain_shape": "paper-rooted",
   "source": {
     "repository": "https://github.com/annefou/konya-wetlands-water-surface",
-    "commit": "5283f019aff7a94318e5793094bdede99b35e9b7",
+    "commit": "30c64e0eca9004f80b34b63a72fcbf3957ad2038",
     "figure": "figures/akgol_scenes.png"
   },
   "steps": [
@@ -180,6 +180,41 @@
         "st02": "cites = nanopubs/drafts-drying/06_citation.md; cited = nanopubs/drafts-drying/06_citation.md; further rows = nanopubs/drafts-drying/06_citation.md"
       },
       "published_uri": null
+    },
+    {
+      "step": "08_synthesis",
+      "template_key": "RESEARCH_SYNTHESIS",
+      "template_uri": "https://w3id.org/np/RApmrqOEr4f5bJC2vayrTnzhwnuEfAU_I4Pdg8K5JxeBw",
+      "prefill": {
+        "synthesis": "konya-closed-basin-wetland-collapse-synthesis",
+        "label": "Konya Closed Basin wetlands have stopped filling since the 1990s, more than the change in rainfall explains",
+        "conclusion": "Three replications on every valid Landsat scene of 1984-2025 and an ERA5-Land water balance of the basin agree on one picture. Akgöl's loss of open water reported for 1987-2017 is reproduced (about 96% between the paper's dates, 92% between the median spring maxima of 1984-1995 and 2015-2025). The weather alone does not explain it: rainfall over 1991-2025 shows no significant trend, and in years as wet as before the four collapsed wetlands now fill to about a third of their former level (23% against 67%), while summers warmed and evaporative demand rose. Earlier drying in the season is seen as a long-term trend at three of five wetlands, but the dominant change is that the wetlands no longer fill at all: Akgöl not since 2000, Hotamış not since 2010, Meke and Meyil not in the 2020s, while a crater lake used as control is stable.",
+        "recommendation": "Monitor these wetlands by how far they fill each spring against a fixed reference period, using every satellite scene, rather than by the area on one date per year, which depends on the date chosen. Treat the collapse as a water-balance problem: test the water-use explanation with groundwater levels, abstraction and irrigated-area data from DSİ, which this work did not have. Do not expect wet years to restore the wetlands: the Climate Digital Twin projects 14-16% less precipitation and summers 2.3-2.9 degC warmer by the 2040s for the basin. Keep a stable reference lake, such as Acıgöl (Karapınar), in any monitoring design.",
+        "conditions": "Shallow, mostly precipitation- and groundwater-fed wetlands of the Konya Closed Basin, Central Anatolia (HydroBASINS endorheic basin 2040085960): Akgöl, Hotamış, Meke, Meyil and Bolluk, with Acıgöl (Karapınar) as control. Landsat 4-9 Collection 2 surface reflectance, NDWI, HEALPix cells of about 49 m, 1984-2025; ERA5-Land basin means for water years 1991-2025; Climate DT generation 2 (IFS-FESOM, IFS-NEMO) for the 2040s.",
+        "limitations": "Water use is inferred from what climate fails to explain, not measured: no groundwater, abstraction or irrigation data were used. The climate record starts in 1991, after much of the decline at Akgöl. NDWI misses bright or turbid water in some scenes. The site sets differ from those of the original papers (Özgencil et al. used seven bird-area lakes listed in their supplement), and their images and thresholds were not available. One basin; the conclusions may not transfer to wetlands fed mainly by rivers.",
+        "date": "2026-10-23",
+        "topicSelection": [
+          {
+            "uri": "http://www.wikidata.org/entity/Q170321",
+            "label": "wetland"
+          },
+          {
+            "uri": "http://www.wikidata.org/entity/Q125928",
+            "label": "climate change"
+          }
+        ]
+      },
+      "provenance": {
+        "synthesis": "nanopubs/drafts-drying/08_synthesis.md",
+        "label": "nanopubs/drafts-drying/08_synthesis.md",
+        "conclusion": "nanopubs/drafts-drying/08_synthesis.md",
+        "recommendation": "nanopubs/drafts-drying/08_synthesis.md",
+        "conditions": "nanopubs/drafts-drying/08_synthesis.md",
+        "limitations": "nanopubs/drafts-drying/08_synthesis.md",
+        "date": "CITATION.cff",
+        "topicSelection": "nanopubs/drafts-drying/08_synthesis.md + Wikidata"
+      },
+      "published_uri": null
     }
   ],
   "carry_forward": [
@@ -207,6 +242,13 @@
       "from": "05_outcome",
       "into": "06_citation",
       "field": "work"
+    },
+    {
+      "from": "05_outcome",
+      "into": "08_synthesis",
+      "field": "sources",
+      "mode": "uriObjectList",
+      "itemKey": "source"
     }
   ]
 }

@@ -12,3 +12,4 @@ Chain built from `nanopubs/drafts-drying/` (`pixi run build-chain-draft-drying` 
 | 04 | FORRT Replication Study | _not yet published_ | |
 | 05 | FORRT Replication Outcome | _not yet published_ | |
 | 06 | CiTO Citation | _not yet published_ | |
+| 08 | Research Synthesis (all three Konya chains) | _not yet published_ | |
