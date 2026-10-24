@@ -11,10 +11,21 @@ import shapely
 
 DEPTH = 10
 HYBAS_ID = 2040085960
+HYBAS_URL = "https://data.hydrosheds.org/file/HydroBASINS/standard/hybas_eu_lev04_v1c.zip"   # HydroSHEDS v1c, CC BY 4.0
+
+
+def download(root):
+    """Fetch the HydroBASINS level-4 polygons for Europe and the Middle East (stored as <ROOT>/basin/hybas_eu_lev04.zip)."""
+    import urllib.request
+    fn = f"{root}/basin/hybas_eu_lev04.zip"
+    if not os.path.exists(fn):
+        os.makedirs(os.path.dirname(fn), exist_ok=True)
+        urllib.request.urlretrieve(HYBAS_URL, fn)
+    return fn
 
 
 def polygon(root):
-    g = gpd.read_file(f"zip://{root}/basin/hybas_eu_lev04.zip")
+    g = gpd.read_file(f"zip://{download(root)}")
     return g[g.HYBAS_ID == HYBAS_ID].geometry.iloc[0]
 
 

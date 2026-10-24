@@ -38,7 +38,8 @@ TUZ = (33.292, 38.859)
 
 def main():
     os.makedirs(f"{ROOT}/basin", exist_ok=True)
-    g = gpd.read_file(f"zip://{ROOT}/basin/hybas_eu_lev04.zip")
+    import basin
+    g = gpd.read_file(f"zip://{basin.download(ROOT)}")
     basin = g[g.HYBAS_ID == 2040085960].geometry.iloc[0]
     x0, y0, x1, y1 = basin.bounds
     first = last = 0.0
