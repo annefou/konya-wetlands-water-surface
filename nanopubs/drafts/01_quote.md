@@ -1,14 +1,5 @@
 # 01 — Quote-with-comment (paper-rooted chains)
 
-> Run the pre-flight checklist in `docs/forrt-form-fields.md` § Pre-flight checklist before drafting.
->
-> If this is a question-rooted chain, use `01_pico.md` or `01_pcc.md` instead — see `docs/chain-decision-tree.md`.
->
-> **After choosing the chain shape, delete the two step-1 alternates you aren't using.** Once you've decided this chain is paper-rooted and keep `01_quote.md`, run:
-> ```bash
-> rm nanopubs/drafts/01_pico.md nanopubs/drafts/01_pcc.md
-> ```
-
 **Form heading:** *"Annotate a paper quotation — Annotating a paper quotation with personal interpretation"*
 
 ## Field-by-field draft
@@ -16,7 +7,7 @@
 <!-- field: paper -->
 ### Cited DOI (text input, required)
 
-Format: starts with `10.` — bare DOI, **NOT** `https://doi.org/...` form.
+Resolved with `resolve_doi` (2026-10-24): Musaoğlu et al. 2018, *Proceedings of the 2nd International Conference on Climate Change*.
 
 ```
 10.17501/iccc.2018.2102
@@ -30,22 +21,18 @@ Format: starts with `10.` — bare DOI, **NOT** `https://doi.org/...` form.
 <!-- field: quotation -->
 ### The exact quotation from the paper (max. 500 characters) (textarea, required)
 
-Verbatim from the paper PDF in `paper/`. Character-for-character. ≤ 500 chars in whole-text mode.
-
-> _Read the PDF first. Don't paraphrase from memory. See `docs/verify-before-drafting.md`._
+Verified with `verify_quote` on `paper/musaoglu-2018.pdf`: page 1 (abstract), characters 1656–1821, match "normalized".
 
 ```
-
+One of the important wetlands of the basin named as Akgol Wetland has almost lost its water surface by 96% at the same time interval, and is in danger of extinction.
 ```
 
-Character count: ___ / 500.
+Character count: 165 / 500.
 
 <!-- field: quotation-end -->
 ### End of quotation (optional - use when quoting beginning and end of a longer passage, max. 500 characters) (textarea, optional)
 
-Only when quoting the beginning *and* end of a longer passage — set the mode above to
-**Quote start/end**, put the opening phrase under the previous heading and the closing
-phrase here. Leave empty for a single short quote.
+*(skip — single short quote)*
 
 ```
 
@@ -54,10 +41,8 @@ phrase here. Leave empty for a single short quote.
 <!-- field: comment -->
 ### Our interpretation and explanation of why this quotation is relevant (max. 800 characters) (textarea, required)
 
-Why this quote matters and what the replication tests. Connect the paper's claim to the work this repo does. Don't repeat the quote.
-
 ```
-
+This is the paper's headline result: Akgöl, once one of the largest wetlands of Türkiye, lost almost all of its open water between 1987 and 2017 in the Konya Closed Basin, a semi-arid endorheic basin with heavy irrigation. The figure comes from one Landsat image per year. The replication tests whether the loss holds when every valid Landsat scene from 1984 to 2025 is used, so that the seasonal filling and drying of the wetland cannot drive the result.
 ```
 
 ## Publication note

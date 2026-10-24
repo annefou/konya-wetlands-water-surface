@@ -1,7 +1,5 @@
 # 02 — AIDA Sentence
 
-> Run the pre-flight checklist in `docs/forrt-form-fields.md` § Pre-flight checklist before drafting.
-
 **Form heading:** *"AIDA Sentence — Make structured scientific claims following the AIDA model"*
 
 ## Field-by-field draft
@@ -9,54 +7,42 @@
 <!-- field: aida -->
 ### AIDA sentence (text input, required)
 
-Atomic, Independent, Declarative, Absolute. One empirical finding. Must end with a full stop.
-
-> _If your draft AIDA contains "and" linking two distinct findings, split into two AIDA nanopubs._
+Atomic (one finding), no numbers, no method names.
 
 ```
-
+Akgöl wetland in the Konya Closed Basin has lost almost all of its open water since the late 1980s.
 ```
 
 <!-- field: topic -->
 ### Select related topics/tags (search/select, optional)
 
-Predefined topic vocabulary — list the labels you intend to pick from the dropdown.
+Checked with `wikidata_lookup` (2026-10-24). No Wikidata item matches the Akgöl of Ereğli (the only "Akgöl, lake in Turkey" item lies in Van province, not in Konya), so none is used.
 
 ```
-
+wetland (Q170321)
+remote sensing (Q199687)
 ```
 
 <!-- field: project -->
 ### Relates to this nanopublication (search/select, required)
 
-URI of the nanopub the AIDA derives from.
-
-- For paper-rooted chains: the Quote-with-comment URI (from step 01).
-- For question-rooted chains: the PICO or PCC URI (from step 01).
-
-Pull the URI from `nanopubs/PUBLISHED.md`.
-
 ```
-
+«URI of step 01 (Quote-with-comment), filled by the chain wizard»
 ```
 
 <!-- field: dataset -->
 ### Supported by datasets (text input, optional)
 
-DOIs/URLs of datasets that ground the AIDA claim.
+Landsat Collection 2 Level-2, USGS EROS; DOIs resolved 2026-10-24.
 
-- _DOI 1: ___
-- _DOI 2: ___
+- _DOI 1: https://doi.org/10.5066/P9IAXOVV
+- _DOI 2: https://doi.org/10.5066/P9C7I13B
+- _DOI 3: https://doi.org/10.5066/P9OGBGM6
 
 <!-- field: publication -->
 ### Supported by other publications (text input, optional)
 
-DOIs/URLs of publications that support the AIDA claim — e.g. peer-reviewed methods papers, or the original paper if not already cited via the Quote.
-
-- _DOI 1: ___
-- _DOI 2: ___
-
-> **Known platform bug (2026-04-26):** if both *Supported by datasets* AND *Supported by other publications* are populated and publishing fails, fall back to publishing this AIDA via Nanodash. The URI namespace becomes `https://w3id.org/np/...` (still valid and citable).
+*(skip — the paper is cited through the Quote; leaving this empty also avoids the dataset + publication publish bug)*
 
 ## Publication note
 
