@@ -1,0 +1,177 @@
+[
+ {
+  "year": 1991,
+  "precip_pct": 92,
+  "fill_pct": 81
+ },
+ {
+  "year": 1992,
+  "precip_pct": 103,
+  "fill_pct": 67
+ },
+ {
+  "year": 1993,
+  "precip_pct": 100,
+  "fill_pct": 68
+ },
+ {
+  "year": 1994,
+  "precip_pct": 85,
+  "fill_pct": 63
+ },
+ {
+  "year": 1995,
+  "precip_pct": 110,
+  "fill_pct": 64
+ },
+ {
+  "year": 1996,
+  "precip_pct": 115,
+  "fill_pct": 48
+ },
+ {
+  "year": 1997,
+  "precip_pct": 107,
+  "fill_pct": 47
+ },
+ {
+  "year": 1998,
+  "precip_pct": 99,
+  "fill_pct": 53
+ },
+ {
+  "year": 1999,
+  "precip_pct": 106,
+  "fill_pct": 79
+ },
+ {
+  "year": 2000,
+  "precip_pct": 96,
+  "fill_pct": 80
+ },
+ {
+  "year": 2001,
+  "precip_pct": 70,
+  "fill_pct": 53
+ },
+ {
+  "year": 2002,
+  "precip_pct": 132,
+  "fill_pct": 99
+ },
+ {
+  "year": 2003,
+  "precip_pct": 98,
+  "fill_pct": 61
+ },
+ {
+  "year": 2004,
+  "precip_pct": 95,
+  "fill_pct": 49
+ },
+ {
+  "year": 2005,
+  "precip_pct": 84,
+  "fill_pct": 41
+ },
+ {
+  "year": 2006,
+  "precip_pct": 98,
+  "fill_pct": 40
+ },
+ {
+  "year": 2007,
+  "precip_pct": 82,
+  "fill_pct": 34
+ },
+ {
+  "year": 2008,
+  "precip_pct": 85,
+  "fill_pct": 34
+ },
+ {
+  "year": 2009,
+  "precip_pct": 109,
+  "fill_pct": 39
+ },
+ {
+  "year": 2010,
+  "precip_pct": 107,
+  "fill_pct": 34
+ },
+ {
+  "year": 2011,
+  "precip_pct": 112,
+  "fill_pct": 36
+ },
+ {
+  "year": 2012,
+  "precip_pct": 94,
+  "fill_pct": null
+ },
+ {
+  "year": 2013,
+  "precip_pct": 96,
+  "fill_pct": 32
+ },
+ {
+  "year": 2014,
+  "precip_pct": 91,
+  "fill_pct": 33
+ },
+ {
+  "year": 2015,
+  "precip_pct": 127,
+  "fill_pct": 27
+ },
+ {
+  "year": 2016,
+  "precip_pct": 83,
+  "fill_pct": 19
+ },
+ {
+  "year": 2017,
+  "precip_pct": 103,
+  "fill_pct": 26
+ },
+ {
+  "year": 2018,
+  "precip_pct": 92,
+  "fill_pct": 11
+ },
+ {
+  "year": 2019,
+  "precip_pct": 126,
+  "fill_pct": 15
+ },
+ {
+  "year": 2020,
+  "precip_pct": 102,
+  "fill_pct": 14
+ },
+ {
+  "year": 2021,
+  "precip_pct": 82,
+  "fill_pct": 9
+ },
+ {
+  "year": 2022,
+  "precip_pct": 109,
+  "fill_pct": 10
+ },
+ {
+  "year": 2023,
+  "precip_pct": 55,
+  "fill_pct": 6
+ },
+ {
+  "year": 2024,
+  "precip_pct": 79,
+  "fill_pct": 2
+ },
+ {
+  "year": 2025,
+  "precip_pct": 79,
+  "fill_pct": 2
+ }
+]

@@ -43,11 +43,15 @@ pystac-client = "*"          # Planetary Computer and Earth Search STAC
 planetary-computer = "*"     # anonymous URL signing for Landsat Collection 2 on Planetary Computer
 healpix-geo = ">=0.4.1"      # HEALPix on the WGS84 ellipsoid, NESTED
 pytorch-cpu = "*"            # backend of healpix-resample
+cdsapi = "*"                 # ERA5-Land monthly means from the Copernicus Climate Data Store
 requests = "*"
 statsmodels = "*"            # trend tests
+netcdf4 = ">=1.7.4,<2"
 
 [pypi-dependencies]
 healpix-resample = "*"       # GRID4EARTH resamplers (conservative bilinear onto HEALPix)
+polytope-client = "*"        # Destination Earth Climate DT (DestinE upgraded access)
+healpix-connector = { git = "https://github.com/annefou/healpix-connector", tag = "v0.2.0" }   # sphere -> WGS84 and coarse-grid sampling (LifeWatch ERIC, GRID4EARTH)
 
 [feature.docs.dependencies]
 mystmd = "*"

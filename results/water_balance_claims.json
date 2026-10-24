@@ -1,0 +1,136 @@
+{
+ "basin_cells": 1442,
+ "era5land_water_years_1991_2025": {
+  "P": {
+   "mean_1991_2020": 421.3,
+   "theil_sen": {
+    "per_decade": -14.38,
+    "ci95": [
+     -36.33,
+     7.88
+    ]
+   },
+   "mean_1991_2000": 426.9,
+   "mean_2016_2025": 384.0,
+   "change": -10.0
+  },
+  "E": {
+   "mean_1991_2020": 436.5,
+   "theil_sen": {
+    "per_decade": -3.9,
+    "ci95": [
+     -17.31,
+     5.74
+    ]
+   },
+   "mean_1991_2000": 442.4,
+   "mean_2016_2025": 416.1,
+   "change": -5.9
+  },
+  "P-E": {
+   "mean_1991_2020": -15.2,
+   "theil_sen": {
+    "per_decade": -6.17,
+    "ci95": [
+     -18.29,
+     6.95
+    ]
+   },
+   "mean_1991_2000": -15.5,
+   "mean_2016_2025": -32.1,
+   "change": 107.2
+  },
+  "PET": {
+   "mean_1991_2020": 1611.0,
+   "theil_sen": {
+    "per_decade": 32.8,
+    "ci95": [
+     1.31,
+     66.39
+    ]
+   },
+   "mean_1991_2000": 1550.4,
+   "mean_2016_2025": 1575.1,
+   "change": 1.6
+  },
+  "T_JJA": {
+   "mean_1991_2020": 21.9,
+   "theil_sen": {
+    "per_decade": 0.49,
+    "ci95": [
+     0.17,
+     0.77
+    ]
+   },
+   "mean_1991_2000": 21.3,
+   "mean_2016_2025": 22.6,
+   "change": 1.3
+  }
+ },
+ "wet_year_fill": {
+  "1991-2005": {
+   "wet_years": [
+    1995,
+    1996,
+    1997,
+    1999,
+    2002
+   ],
+   "precip_mm": [
+    463,
+    484,
+    451,
+    446,
+    555
+   ],
+   "mean_spring_fill_pct_4_sites": 67.4,
+   "years_with_fill_data": 5
+  },
+  "2011-2025": {
+   "wet_years": [
+    2011,
+    2015,
+    2017,
+    2019,
+    2022
+   ],
+   "precip_mm": [
+    472,
+    534,
+    436,
+    530,
+    461
+   ],
+   "mean_spring_fill_pct_4_sites": 22.6,
+   "years_with_fill_data": 5
+  }
+ },
+ "climatedt": {
+  "IFS-FESOM": {
+   "bias_1991_2020_vs_era5land": {
+    "P_pct": -18.8,
+    "E_pct": -24.8,
+    "T_JJA_degC": 1.81
+   },
+   "change_2040s_vs_1991_2020": {
+    "P_pct": -16.3,
+    "E_pct": -9.5,
+    "P-E_mm": -24.7,
+    "T_JJA_degC": 2.85
+   }
+  },
+  "IFS-NEMO": {
+   "bias_1991_2020_vs_era5land": {
+    "P_pct": 2.3,
+    "E_pct": -11.7,
+    "T_JJA_degC": 0.87
+   },
+   "change_2040s_vs_1991_2020": {
+    "P_pct": -14.3,
+    "E_pct": -8.9,
+    "P-E_mm": -27.1,
+    "T_JJA_degC": 2.34
+   }
+  }
+ }
+}
