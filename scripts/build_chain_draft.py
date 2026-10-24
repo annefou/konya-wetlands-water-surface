@@ -808,6 +808,17 @@ def build_step(step: str, spec: dict, registry_meta: dict, cff: dict,
                 prefill[form_field] = urls             # array of plain strings
                 provenance[form_field] = f"{drafts_label}/{step}.md"
             continue
+        # A second chain in the same repo may replicate a paper other than
+        # CITATION.cff's first article: a DOI drafted for the paper/source field
+        # wins, as the drafted DOI does for the CiTO citation above.
+        if name in ("paper", "source") and draft_text:
+            alias = DRAFT_HEADING_ALIAS.get((step, name))
+            drafted = draft_content(draft_text, {"label": alias} if alias else f)
+            doi = _bare_doi(drafted) if drafted else None
+            if doi and re.match(r"^10\.\d+/\S+$", doi):
+                prefill[name] = doi if name == "paper" else f"https://doi.org/{doi}"
+                provenance[name] = f"{drafts_label}/{step}.md"
+                continue
         mv = metadata_value(step, name, cff)
         if mv is not None:
             prefill[name] = mv
@@ -853,6 +864,8 @@ def build_chain_draft(repo_root: Path, *, repository: str, commit: str,
     cff_path = repo_root / "CITATION.cff"
     cff = load_citation(cff_path.read_text()) if cff_path.exists() else {}
     pub_path = repo_root / "nanopubs" / "PUBLISHED.md"
+    if (drafts_dir / "PUBLISHED.md").exists():     # a second limb records its own URIs,
+        pub_path = drafts_dir / "PUBLISHED.md"     # or it would carry the first chain's
     published = parse_published(pub_path.read_text()) if pub_path.exists() else {}
 
     anchor = detect_anchor(drafts_dir)

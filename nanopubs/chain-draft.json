@@ -4,7 +4,7 @@
   "chain_shape": "paper-rooted",
   "source": {
     "repository": "https://github.com/annefou/konya-wetlands-water-surface",
-    "commit": "28b8422ca931e4a9f5eba58d6212b82d66c89a5b",
+    "commit": "5283f019aff7a94318e5793094bdede99b35e9b7",
     "figure": "figures/akgol_scenes.png"
   },
   "steps": [
@@ -18,7 +18,7 @@
         "comment": "This is the paper's headline result: Akgöl, once one of the largest wetlands of Türkiye, lost almost all of its open water between 1987 and 2017 in the Konya Closed Basin, a semi-arid endorheic basin with heavy irrigation. The figure comes from one Landsat image per year. The replication tests whether the loss holds when every valid Landsat scene from 1984 to 2025 is used, so that the seasonal filling and drying of the wetland cannot drive the result."
       },
       "provenance": {
-        "paper": "CITATION.cff",
+        "paper": "nanopubs/drafts/01_quote.md",
         "quotation": "nanopubs/drafts/01_quote.md",
         "comment": "nanopubs/drafts/01_quote.md"
       },
@@ -73,7 +73,7 @@
         "claim": "nanopubs/drafts/03_claim.md",
         "label": "nanopubs/drafts/03_claim.md",
         "forrtType": "nanopubs/drafts/03_claim.md",
-        "source": "CITATION.cff"
+        "source": "nanopubs/drafts/03_claim.md"
       },
       "manual": [
         "forrtType"

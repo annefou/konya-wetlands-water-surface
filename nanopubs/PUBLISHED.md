@@ -13,6 +13,13 @@ This file is the canonical registry of published nanopub URIs for this replicati
 | 05 | FORRT Replication Outcome | _not yet published_ | |
 | 06 | CiTO Citation | _not yet published_ | |
 
+## Other chains in this repository
+
+| Chain | Paper | Drafts | Registry |
+|---|---|---|---|
+| climate | Musaoğlu et al. 2018, the decline and the weather | `nanopubs/drafts-climate/` | `nanopubs/drafts-climate/PUBLISHED.md` |
+| drying | Özgencil et al. 2025, earlier drying | `nanopubs/drafts-drying/` | `nanopubs/drafts-drying/PUBLISHED.md` |
+
 ## Optional layers
 
 | Step | Template | URI | Published |

@@ -94,6 +94,9 @@ check-templates = "python scripts/check_template_drift.py"
 # FORRT-chain wizard) from CITATION.cff + the drafts + PUBLISHED.md. Offline, no
 # Claude. See docs/chain-draft-contract.md. Run after drafting, then commit the file.
 build-chain-draft = "python scripts/build_chain_draft.py"
+# Second and third chains of this repo (Musaoğlu 2018 on the weather; Özgencil 2025 on drying).
+build-chain-draft-climate = "python scripts/build_chain_draft.py --drafts-dir nanopubs/drafts-climate -o nanopubs/chain-draft-climate.json"
+build-chain-draft-drying = "python scripts/build_chain_draft.py --drafts-dir nanopubs/drafts-drying -o nanopubs/chain-draft-drying.json"
 sync-drafts = "python scripts/sync_draft_skeletons.py"
 # Generates the reader-facing story page (blog/index.html) from the PUBLISHED
 # chain: fetches the constellation for the apex in nanopubs/PUBLISHED.md (the
