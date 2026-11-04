@@ -56,40 +56,107 @@ Landsat (USGS, public domain), JRC Global Surface Water (CC BY 4.0), HydroBASINS
 
 ---
 
-## Quick start
+## Install and run
+
+You can read the results without installing anything: the summary tables are in `results/`, the figures in
+`figures/`, and the [Jupyter Book](https://annefou.github.io/konya-wetlands-water-surface/) shows both. Rerunning the analysis needs the
+steps below.
+
+### Install
+
+1. Install pixi (<https://pixi.sh>): `curl -fsSL https://pixi.sh/install.sh | bash`.
+2. Get the code and the pinned environment:
+
+   ```bash
+   git clone https://github.com/annefou/konya-wetlands-water-surface.git
+   cd konya-wetlands-water-surface
+   pixi install
+   ```
+
+   Linux (x86-64) only: the pixi lock file is solved for `linux-64`. On macOS or Windows use Docker. Pixi installs everything from `pixi.toml` and `pixi.lock` into `.pixi/`; `pixi run <task>` runs a
+   task in that environment without activating it.
+
+### Accounts each step needs
+
+| What you run | Data | Account needed |
+| --- | --- | --- |
+| `pixi run snakemake --cores 1` (claims C1-C3) | Landsat Collection 2 (Microsoft Planetary Computer), JRC Global Surface Water, HydroBASINS, OpenStreetMap seed points | **none**: all public and anonymous |
+| `pixi run snakemake --cores 1 climate` (basin water balance) | ERA5-Land monthly means | **Copernicus Climate Data Store** (free) |
+| | Climate DT generation 2 monthly means, IFS-FESOM and IFS-NEMO, 1990-2049 | **DestinE upgraded access** |
+
+Accounts are read from your home directory or the environment, never from the repository, and nothing in `work/`
+(the downloads) is committed. Set up only the ones for the steps you run.
+
+### Copernicus Climate Data Store (ERA5-Land)
+
+1. Create a free account at <https://cds.climate.copernicus.eu> and log in.
+2. Accept the licence of each dataset used, on the dataset page under *Download* → *Terms of use*: `reanalysis-era5-land-monthly-means`.
+3. Copy your personal access token from your profile page into `~/.cdsapirc`:
+
+   ```
+   url: https://cds.climate.copernicus.eu/api
+   key: <your personal access token>
+   ```
+
+   `cdsapi` also reads `CDSAPI_URL` and `CDSAPI_KEY` from the environment. Requests wait in the CDS queue (minutes to
+   hours); the downloads are resumable.
+
+### Destination Earth: Climate DT (DestinE upgraded access)
+
+1. Create an account on the DestinE Platform, <https://platform.destine.eu/>, and request **upgraded access**, which
+   includes the Climate Change Adaptation Digital Twin. Eligibility and terms are set by the platform (at the time of
+   writing: users in EU Member States and in countries associated with the Digital Europe Programme; check the current
+   terms of use before you apply). Upgraded access is not automatic: allow time for the request to be reviewed.
+2. Get the Polytope key (an offline token) with ECMWF's script; it asks for your DestinE user name and password and
+   writes `{"user_key": "<offline token>"}` to `~/.polytopeapirc`:
+
+   ```bash
+   curl -sO https://raw.githubusercontent.com/destination-earth-digital-twins/polytope-examples/main/desp-authentication.py
+   pixi run python desp-authentication.py
+   ```
+
+   `polytope-client` also reads `POLYTOPE_USER_KEY` from the environment. A *DestinE Data Lake* (DEDL) API key is a
+   different credential and is refused by Polytope (HTTP 401).
+3. Authentication is not authorisation: a valid key can still be refused the data if upgraded access has not been
+   granted yet; the first request tells you.
+4. Terms: raw Climate DT data may not be redistributed. The pipeline keeps downloads in `work/` (not in git) and
+   commits only derived statistics; keep it that way in any fork.
+
+### Run
 
 ```bash
-git clone https://github.com/annefou/konya-wetlands-water-surface.git
-cd konya-wetlands-water-surface
-pixi install
-pixi run aoi                  # site outlines and JRC reference (results/sites_jrc.json)
-pixi run landsat              # every Landsat scene 1984-2025 (resumable, about 40 min)
-pixi run analyse              # claims C1 and C3, figures
-pixi run python pipeline/03_basin_jrc.py work     # claim C2 (needs work/basin/hybas_eu_lev04.zip from data.hydrosheds.org)
+pixi run snakemake --cores 1             # claims C1-C3: no account; the Landsat step takes about 40 min and is resumable
+pixi run snakemake --cores 1 climate     # basin water balance: CDS and DestinE accounts
 ```
 
-(Pixi resolves `pixi.toml` against the per-platform `pixi.lock`, installs the env under `.pixi/`, and provides `pixi run` for any task without needing an `activate` step.)
-
-Or with Docker:
-
-```bash
-docker run --rm ghcr.io/annefou/konya-wetlands-water-surface:latest
-```
-
-The Jupyter Book version is at <https://annefou.github.io/konya-wetlands-water-surface/>.
-
-## How to reproduce
-
-```
-pixi install
-pixi run snakemake --cores 1             # Landsat (Planetary Computer), JRC Global Surface Water, HydroBASINS
-pixi run snakemake --cores 1 climate     # basin water balance: CDS account (ERA5-Land) and DestinE upgraded access
-```
+Single steps: `pixi run aoi` (site outlines, JRC reference), `pixi run landsat` (every Landsat scene 1984-2025),
+`pixi run analyse` (claims C1 and C3, figures), `pixi run python pipeline/03_basin_jrc.py work` (claim C2; downloads
+HydroBASINS level 4 from data.hydrosheds.org itself).
 
 Every step is a script in `pipeline/` with its usage in its docstring; `Snakefile` gives the order, inputs and
-outputs. The Landsat step is long and resumable. Accounts are read from `~/.cdsapirc` and `~/.polytopeapirc` and
-never stored here. Downloads stay in `work/`; only code, plots, per-scene areas (Landsat is public domain) and
-summary results are committed. The country-file charts are in `docs/country_file/`.
+outputs. `pixi run snakemake --cores 1 --dry-run` lists what would run without downloading anything.
+The charts of the LifeWatch country file are in `docs/country_file/` (chart code and the rows they plot).
+
+### With Docker
+
+The image holds the environment and the code, never an account. Put the accounts the steps need in a file that
+stays on your machine (for example `~/credentials.env`, outside the repository) and pass it at run time, from the
+cloned repository (so that `work/` and `results/` are kept on your disk):
+
+```
+CDSAPI_URL=https://cds.climate.copernicus.eu/api
+CDSAPI_KEY=<CDS personal access token>
+COPERNICUSMARINE_SERVICE_USERNAME=<Copernicus Marine user name>
+COPERNICUSMARINE_SERVICE_PASSWORD=<Copernicus Marine password>
+POLYTOPE_USER_KEY=<DestinE offline token>
+```
+
+```bash
+docker run --rm --env-file ~/credentials.env -v "$PWD/work:/app/work" -v "$PWD/results:/app/results" \
+    ghcr.io/annefou/konya-wetlands-water-surface:latest pixi run snakemake --cores 1 climate
+```
+
+Leave out the lines a step does not need. The image is published on GitHub's container registry with each release.
 
 ## Built from a template
 
