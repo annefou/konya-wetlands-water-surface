@@ -8,6 +8,8 @@ project:
         - "LifeWatch ERIC"
   github: https://github.com/annefou/konya-wetlands-water-surface
   license: MIT
+  bibliography:
+    - references.bib
   toc:
     - file: index.md
     - file: notebooks/01_data_download.ipynb
