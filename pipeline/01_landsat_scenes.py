@@ -5,7 +5,7 @@ Source: Landsat Collection 2 Level-2 surface reflectance (USGS), served by Micro
 Per scene and site:
   1. read green, NIR and QA_PIXEL for the site window (COG, windowed HTTP read), scale to reflectance
      (DN x 0.0000275 - 0.2), mask fill, dilated cloud, cloud, cloud shadow and snow (QA bits 0, 1, 3, 4, 5);
-  2. resample green and NIR onto the site's HEALPix cells (depth 17, ~49 m, healpix-geo WGS84) with
+  2. resample green and NIR onto the site's HEALPix cells (depth 18, ~25 m, healpix-geo WGS84) with
      healpix-resample, conservative bilinear, BEFORE any index or threshold (masked pixels excluded);
   3. NDWI = (green - NIR) / (green + NIR) per cell, as in Musaoglu et al. 2018 (McFeeters 1996); water where
      NDWI > 0 (the paper's "positive values"), with -0.1 and +0.1 as sensitivity thresholds;

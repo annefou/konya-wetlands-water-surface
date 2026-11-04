@@ -38,6 +38,17 @@ claims = json.loads((R / "claims.json").read_text())
 pd.DataFrame(claims["C1_akgol_paper_years"])
 
 # %% [markdown]
+# ## Grid depth: why HEALPix depth 18
+# The same Landsat pixels at depth 17 (~50 m), depth 18 (~25 m) and as native 30 m pixels counted inside the
+# outline (`pipeline/91_depth_sensitivity.py`). Depth 17, coarser than the pixel, under-counted small or patchy water;
+# the replication uses depth 18. Differences in % against the native pixels, scenes with at least 1 ha of water.
+
+# %%
+ds = json.loads((R / "depth_sensitivity.json").read_text())["sites"]
+pd.DataFrame({k: {"scenes": v["scenes"], "depth 17 vs native, median %": v["ha_d17_vs_native_pct"]["median"],
+                  "depth 18 vs native, median %": v["ha_d18_vs_native_pct"]["median"]} for k, v in ds.items()}).T
+
+# %% [markdown]
 # ## C2 — basin water, JRC 1984 → 2021
 # Tuz Gölü, a shallow salt lake holding about 40 % of the basin's water, hides the loss of the freshwater lakes and
 # wetlands.

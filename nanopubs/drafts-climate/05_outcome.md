@@ -72,7 +72,7 @@ The weather alone does not account for the decline. Over the Konya Closed Basin,
 ### Describe the evidence that supports your conclusion (textarea, required)
 
 ```
-ERA5-Land basin means over 1,442 HEALPix cells, water years 1991-2025, Theil-Sen per decade (95% interval): precipitation -14.4 mm (-36.3 to 7.9), mean 421 mm in 1991-2020; evaporation -3.9 mm (-17.3 to 5.7); P - E -6.2 mm (-18.3 to 7.0); potential evaporation +32.8 mm (1.3 to 66.4); June-August temperature +0.49 degC (0.17 to 0.77). 2016-2025 against 1991-2000: precipitation -10.0%, summer temperature +1.3 degC. Wet-year spring fill of Akgöl, Hotamış, Meke and Meyil: 67.4% (1995, 1996, 1997, 1999, 2002) against 22.6% (2011, 2015, 2017, 2019, 2022). Climate DT 2040s against 1991-2020: precipitation -16.3% (IFS-FESOM) and -14.3% (IFS-NEMO), summer temperature +2.85 and +2.34 degC. File: results/water_balance_claims.json.
+ERA5-Land basin means over 1,442 HEALPix cells, water years 1991-2025, Theil-Sen per decade (95% interval): precipitation -14.4 mm (-36.3 to 7.9), mean 421 mm in 1991-2020; evaporation -3.9 mm (-17.3 to 5.7); P - E -6.2 mm (-18.3 to 7.0); potential evaporation +32.8 mm (1.3 to 66.4); June-August temperature +0.49 degC (0.17 to 0.77). 2016-2025 against 1991-2000: precipitation -10.0%, summer temperature +1.3 degC. Wet-year spring fill of Akgöl, Hotamış, Meke and Meyil: 67.5% (1995, 1996, 1997, 1999, 2002) against 22.6% (2011, 2015, 2017, 2019, 2022). Climate DT 2040s against 1991-2020: precipitation -16.3% (IFS-FESOM) and -14.3% (IFS-NEMO), summer temperature +2.85 and +2.34 degC. File: results/water_balance_claims.json.
 ```
 
 <!-- field: limitations -->

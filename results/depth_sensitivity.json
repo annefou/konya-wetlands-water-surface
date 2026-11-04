@@ -1,0 +1,109 @@
+{
+ "scenes_valid_at_all_three": {},
+ "sites": {
+  "akgol": {
+   "scenes": 450,
+   "scenes_with_at_least_1_ha_water": 348,
+   "median_ha": {
+    "ha_d17": 43.4,
+    "ha_d18": 51.1,
+    "ha_native": 53.7
+   },
+   "max_ha": {
+    "ha_d17": 4943.3,
+    "ha_d18": 4892.7,
+    "ha_native": 4860.3
+   },
+   "ha_d17_vs_native_pct": {
+    "median": -16.7,
+    "p05": -52.0,
+    "p95": 19.9
+   },
+   "ha_d17_vs_native_abs_ha": {
+    "median": 9.06,
+    "max": 190.51
+   },
+   "ha_d18_vs_native_pct": {
+    "median": -4.5,
+    "p05": -19.3,
+    "p95": 12.5
+   },
+   "ha_d18_vs_native_abs_ha": {
+    "median": 2.87,
+    "max": 121.67
+   },
+   "d18_vs_d17_pct": {
+    "median": 13.9,
+    "p05": -8.1,
+    "p95": 70.7
+   },
+   "paper_years_closest_scene_at_d17": {
+    "1987": {
+     "paper_ha": 2958.4,
+     "scene": "LT05_L2SP_176034_19870609_02_T1",
+     "ha_d17": 2999.4,
+     "ha_d18": 3006.83,
+     "ha_native": 2997.0
+    },
+    "1998": {
+     "paper_ha": 1153.9,
+     "scene": "LT05_L2SP_176034_19980607_02_T1",
+     "ha_d17": 730.86,
+     "ha_d18": 827.66,
+     "ha_native": 869.31
+    },
+    "2007": {
+     "paper_ha": 12.7,
+     "scene": "LT05_L2SP_176034_20070515_02_T1",
+     "ha_d17": 19.3,
+     "ha_d18": 27.96,
+     "ha_native": 29.97
+    },
+    "2017": {
+     "paper_ha": 117.2,
+     "scene": "LC08_L2SP_176034_20170611_02_T1",
+     "ha_d17": 128.66,
+     "ha_d18": 146.53,
+     "ha_native": 154.53
+    }
+   }
+  },
+  "meyil": {
+   "scenes": 1423,
+   "scenes_with_at_least_1_ha_water": 1067,
+   "median_ha": {
+    "ha_d17": 3.7,
+    "ha_d18": 4.2,
+    "ha_native": 4.6
+   },
+   "max_ha": {
+    "ha_d17": 27.7,
+    "ha_d18": 28.5,
+    "ha_native": 26.7
+   },
+   "ha_d17_vs_native_pct": {
+    "median": -23.0,
+    "p05": -54.5,
+    "p95": -6.6
+   },
+   "ha_d17_vs_native_abs_ha": {
+    "median": 1.04,
+    "max": 3.38
+   },
+   "ha_d18_vs_native_pct": {
+    "median": -6.9,
+    "p05": -19.8,
+    "p95": 3.1
+   },
+   "ha_d18_vs_native_abs_ha": {
+    "median": 0.29,
+    "max": 1.85
+   },
+   "d18_vs_d17_pct": {
+    "median": 21.9,
+    "p05": 5.4,
+    "p95": 79.6
+   }
+  }
+ }
+}

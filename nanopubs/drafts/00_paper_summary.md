@@ -33,7 +33,7 @@ Same sensor family and index (reproduction), but every valid Landsat scene from 
 ## Notes for downstream drafts
 
 - The paper writes "Akgol" and "Turkey"; quotes stay verbatim, our text writes "Akgöl" and "Türkiye".
-- Closest scenes: 2999.4 ha (9 June 1987), 730.9 (7 June 1998, below the paper's 1153.9), 19.3 (15 May 2007), 128.7 (11 June 2017); 1987→2017 −95.7 %. Medians of spring maxima 1984–95 vs 2015–25: 3436 → 282 ha, −91.8 %. Akgöl has not filled to half its 1984–95 level in any year since 2000.
+- Closest scenes (depth 18): 3006.8 ha (9 June 1987), 827.7 (7 June 1998, below the paper's 1153.9; 1151.9 at NDWI > −0.1), 9.3 (31 May 2007), 94.8 (27 June 2017); 1987→2017 −96.8 %. Medians of spring maxima 1984–95 vs 2015–25: 3423 → 299 ha, −91.3 %. Akgöl has not filled to half its 1984–95 level in any year since 2000.
 - Basin: JRC −20.0 % (1984–2021), −40.4 % without Tuz Gölü.
 - The paper also says the decrease "is matched with the meteorological conditions"; our water balance (`04c_water_balance.py`) qualifies that. It is a candidate for a second chain, not part of this one.
 - Paper PDF is local only (`paper/*.pdf` git-ignored).

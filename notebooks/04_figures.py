@@ -21,7 +21,7 @@
 
 # %% [markdown]
 # ## Akgöl: every valid scene against the paper's four values
-# One image per year hides a two-fold seasonal range (3,939 ha on 22 April and 1,920 ha on 27 July 1987).
+# One image per year hides a two-fold seasonal range (3,860 ha on 22 April and 1,969 ha on 27 July 1987).
 # ![Akgöl, every scene](../figures/akgol_scenes.png)
 #
 # ## Spring and summer water surface per site

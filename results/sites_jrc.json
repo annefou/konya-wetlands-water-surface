@@ -1,7 +1,7 @@
 {
  "source": "JRC Global Surface Water v1.4 (1984-2021), tile 30E_40N",
- "healpix_depth": 17,
- "cell_area_ha": 0.24741438960777226,
+ "healpix_depth": 18,
+ "cell_area_ha": 0.061853597401943065,
  "sites": {
   "akgol": {
    "name": "Akg\u00f6l (Ere\u011fli)",
@@ -22,8 +22,8 @@
     "ephemeral permanent": 2.8,
     "ephemeral seasonal": 68.0
    },
-   "healpix_cells": 22539,
-   "healpix_area_ha": 5576.5,
+   "healpix_cells": 89066,
+   "healpix_area_ha": 5509.1,
    "bbox": [
     33.6833,
     37.4725,
@@ -52,8 +52,8 @@
     "ephemeral permanent": 2.6,
     "ephemeral seasonal": 543.4
    },
-   "healpix_cells": 14042,
-   "healpix_area_ha": 3474.2,
+   "healpix_cells": 55382,
+   "healpix_area_ha": 3425.6,
    "bbox": [
     33.0245,
     37.493,
@@ -79,8 +79,8 @@
     "ephemeral permanent": 0.8,
     "ephemeral seasonal": 9.2
    },
-   "healpix_cells": 952,
-   "healpix_area_ha": 235.5,
+   "healpix_cells": 3657,
+   "healpix_area_ha": 226.2,
    "bbox": [
     33.631,
     37.6763,
@@ -108,8 +108,8 @@
     "ephemeral permanent": 0.1,
     "ephemeral seasonal": 2.4
    },
-   "healpix_cells": 968,
-   "healpix_area_ha": 239.5,
+   "healpix_cells": 3724,
+   "healpix_area_ha": 230.3,
    "bbox": [
     33.6557,
     37.706,
@@ -133,8 +133,8 @@
     "lost seasonal": 2.5,
     "permanent to seasonal": 1.2
    },
-   "healpix_cells": 229,
-   "healpix_area_ha": 56.7,
+   "healpix_cells": 820,
+   "healpix_area_ha": 50.7,
    "bbox": [
     33.349,
     37.984,
@@ -164,8 +164,8 @@
     "ephemeral permanent": 1.3,
     "ephemeral seasonal": 29.1
    },
-   "healpix_cells": 7328,
-   "healpix_area_ha": 1813.1,
+   "healpix_cells": 28725,
+   "healpix_area_ha": 1776.7,
    "bbox": [
     32.8948,
     38.4932,

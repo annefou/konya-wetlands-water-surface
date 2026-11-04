@@ -68,3 +68,5 @@ claude-resume.txt
 # Work files (inputs, rasters, model outputs): never committed
 work/
 paper/*.pdf
+work18/
+*.log

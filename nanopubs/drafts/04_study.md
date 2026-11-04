@@ -45,14 +45,14 @@ The claim that Akgöl wetland lost about 96% of its water surface between 1987 a
 ### Describe how the claim is reproduced/replicated. (textarea, required)
 
 ```
-All Landsat Collection 2 Level-2 scenes (Landsat 4, 5, 7, 8 and 9) over Akgöl from 1984 to 2025, read from Microsoft Planetary Computer. For each scene the green and near-infrared bands are read for the site window, cloud, shadow, snow and fill pixels are masked with QA_PIXEL, and the bands are resampled onto HEALPix cells of about 49 m (depth 17, WGS84 ellipsoid, nested) with conservative bilinear resampling before computing NDWI as in the paper. Water is NDWI above 0, with -0.1 and +0.1 as sensitivity. A scene counts when at least 95% of the site's cells are valid (455 scenes). The site outline is the JRC Global Surface Water maximum extent. For each of the paper's years the scene closest to its value and the range over all scenes are reported; for the long-term change, the median over 1984-1995 and over 2015-2025 of each year's spring (March-June) maximum. The basin figure uses JRC Global Surface Water transitions 1984-2021 over HydroBASINS basin 2040085960.
+All Landsat Collection 2 Level-2 scenes (Landsat 4, 5, 7, 8 and 9) over Akgöl from 1984 to 2025, read from Microsoft Planetary Computer. For each scene the green and near-infrared bands are read for the site window, cloud, shadow, snow and fill pixels are masked with QA_PIXEL, and the bands are resampled onto HEALPix cells of about 25 m (depth 18, WGS84 ellipsoid, nested) with conservative bilinear resampling before computing NDWI as in the paper. Water is NDWI above 0, with -0.1 and +0.1 as sensitivity. A scene counts when at least 95% of the site's cells are valid (451 scenes). The site outline is the JRC Global Surface Water maximum extent. For each of the paper's years the scene closest to its value and the range over all scenes are reported; for the long-term change, the median over 1984-1995 and over 2015-2025 of each year's spring (March-June) maximum. The basin figure uses JRC Global Surface Water transitions 1984-2021 over HydroBASINS basin 2040085960.
 ```
 
 <!-- field: deviation -->
 ### Describe any deviations from original methodology. (textarea, optional)
 
 ```
-Every valid scene instead of one hand-picked image per year; a fixed NDWI threshold with sensitivity instead of a threshold chosen per image; Collection 2 surface reflectance instead of the images processed in ERDAS; HEALPix cells of about 49 m instead of 30 m pixels; the record extended to 2025. The basin-wide figure uses JRC Global Surface Water (1984-2021) over the HydroBASINS endorheic basin instead of the paper's 16 water bodies.
+Every valid scene instead of one hand-picked image per year; a fixed NDWI threshold with sensitivity instead of a threshold chosen per image; Collection 2 surface reflectance instead of the images processed in ERDAS; HEALPix cells of about 25 m instead of 30 m pixels; the record extended to 2025. The basin-wide figure uses JRC Global Surface Water (1984-2021) over the HydroBASINS endorheic basin instead of the paper's 16 water bodies.
 ```
 
 <!-- field: keyword -->

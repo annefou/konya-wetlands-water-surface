@@ -61,3 +61,9 @@ rule doc_figures:
     output: "results/doc_figure_fill.json", "results/akgol_scenes.csv", "results/doc_figure_akgol_scenes.csv",
             "figures/doc_fill.png"
     shell: "python pipeline/99_doc_figures.py {W}"
+
+
+rule depth_sensitivity:             # depth 17 vs 18 vs native 30 m pixels, Akgöl and Meyil (why the grid is depth 18)
+    input: f"{W}/landsat/scenes.csv"
+    output: "results/depth_sensitivity.json"
+    shell: "python pipeline/91_depth_sensitivity.py {W}"

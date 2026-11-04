@@ -3,7 +3,7 @@
 For each site in common.SITES: the JRC GSW v1.4 occurrence layer (1984-2021, Pekel et al. 2016, tile
 30E_40N, read over HTTP for a 0.3 deg window) is thresholded at "water seen at least once", the connected
 patch nearest the seed point is kept, buffered by 300 m (10 pixels), and its outline is covered with HEALPix
-cells (depth 17, healpix-geo, WGS84). The same window also gives the JRC reference figures used in
+cells (depth 18, healpix-geo, WGS84). The same window also gives the JRC reference figures used in
 02_analyse.py: maximum extent, permanent water (occurrence >= 90 %), and the JRC "transitions" class areas.
 
 Usage: python pipeline/00_aoi.py <ROOT>          (ROOT = work)

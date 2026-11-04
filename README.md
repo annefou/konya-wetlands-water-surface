@@ -26,16 +26,22 @@
 
 ### Results (23 October 2026)
 
-- **C1 reproduced for 1987, 2007 and 2017**: the scene closest to the paper's value is 2999 ha on 9 June 1987 (paper 2958.4), 19.3 ha on 15 May 2007 (12.7), 128.7 ha on 11 June 2017 (117.2). For 1998 our valid scenes peak at 731 ha (1087 ha at NDWI > -0.1), below the paper's 1153.9 ha. One image per year hides a two-fold seasonal range: 3,939 ha on 22 April and 1,920 ha on 27 July 1987.
+- **C1 reproduced for 1987, 2007 and 2017**: the scene closest to the paper's value is 3007 ha on 9 June 1987 (paper 2958.4), 9.3 ha on 31 May 2007 (12.7), 94.8 ha on 27 June 2017 (117.2), and the paper's values lie within the range of each year's valid scenes. For 1998 our valid scenes peak at 828 ha, below the paper's 1153.9 ha at its threshold (NDWI > 0); at NDWI > -0.1 the same scene gives 1152 ha. One image per year hides a two-fold seasonal range: 3,860 ha on 22 April and 1,969 ha on 27 July 1987.
 - **C2 consistent**: JRC water 2,540 km2 (1984) -> 2,033 km2 (2021), **-20.0 %**; without Tuz Gölü, **-40.4 %** (1,477 -> 880 km2). Tuz Gölü, a shallow salt lake holding 40 % of the basin's water, hides the loss of the freshwater lakes and wetlands.
-- **C3 supported, in a stronger form** (a year counts as filled when its spring maximum reaches half the 1984-1995 median spring maximum): Akgöl filled in every year of the 1980s, 40 % of the 1990s, never since 2000 (spring maximum 3,436 -> 282 ha, 1984-95 vs 2015-25 medians); Hotamış 1,217 -> 25 ha, never since 2010; Meke (Ramsar) 53 -> 2 ha, never in the 2020s; Meyil 6.7 -> 1.7 ha, 78 % of the 2010s and never in the 2020s. The crater lake Acıgöl (Karapınar) is stable (109 -> 97 ha) and serves as a control. Table: `results/fill_by_decade.csv`.
+- **C3 supported, in a stronger form** (a year counts as filled when its spring maximum reaches half the 1984-1995 median spring maximum): Akgöl filled in every year of the 1980s, 40 % of the 1990s, never since 2000 (spring maximum 3,423 -> 299 ha, 1984-95 vs 2015-25 medians); Hotamış 1,254 -> 25 ha, never since 2010; Meke (Ramsar) 55 -> 3 ha, never in the 2020s; Meyil 7.8 -> 2.7 ha, 78 % of the 2010s and never in the 2020s. The crater lake Acıgöl (Karapınar) is stable (111 -> 99 ha) and serves as a control. Table: `results/fill_by_decade.csv`.
+- **Grid depth** (`pipeline/91_depth_sensitivity.py`, `results/depth_sensitivity.json`): until 4 November 2026 the
+  cells were depth 17 (~50 m), coarser than the 30 m pixels. Against the native pixels, depth 17 under-counted small or
+  patchy water (median -17 % at Akgöl, -23 % at Meyil, scenes with at least 1 ha of water); depth 18 (~25 m) gives
+  -4.5 % and -6.9 %, so the replication now uses depth 18. Large extents agree at both depths (1987: 2999, 3007 and
+  2997 ha). C3 (fill by decade) and the wet-year fill are unchanged; C1's closest scenes and the 1996-2000 drying date
+  at Akgöl changed (numbers above are depth 18).
 - **NDWI caveat**: NDWI misses bright or turbid water in some scenes (Acıgöl reads 0 ha from January to June 1996; Meyil reads 0 in some scenes); the reference is therefore the median of yearly spring maxima, not of single scenes. MNDWI (SWIR) would be more robust for the crater lakes; the replication keeps the paper's NDWI.
 
 Figures: [Akgöl, every scene](figures/akgol_scenes.png) · [spring and summer per site](figures/sites_spring_summer.png) · [drying date](figures/sites_drying_doy.png). Tables: `results/`.
 
 ### Method
 
-- Landsat Collection 2 Level-2 (Landsat 5, 7, 8, 9) from Microsoft Planetary Computer, anonymous access. Each scene: green, NIR and QA_PIXEL read for the site window; cloud, shadow, snow and fill masked; green and NIR resampled onto HEALPix cells (depth 17, ~49 m, [healpix-geo](https://github.com/GRID4EARTH/healpix-geo) on the WGS84 ellipsoid, NESTED) with [healpix-resample](https://github.com/GRID4EARTH/healpix-resample) (conservative bilinear) **before** NDWI and its threshold (NDWI > 0; -0.1 and +0.1 as sensitivity). A scene counts for a site when at least 95 % of its cells are valid.
+- Landsat Collection 2 Level-2 (Landsat 5, 7, 8, 9) from Microsoft Planetary Computer, anonymous access. Each scene: green, NIR and QA_PIXEL read for the site window; cloud, shadow, snow and fill masked; green and NIR resampled onto HEALPix cells (depth 18, ~25 m, [healpix-geo](https://github.com/GRID4EARTH/healpix-geo) on the WGS84 ellipsoid, NESTED) with [healpix-resample](https://github.com/GRID4EARTH/healpix-resample) (conservative bilinear) **before** NDWI and its threshold (NDWI > 0; -0.1 and +0.1 as sensitivity). A scene counts for a site when at least 95 % of its cells are valid.
 - Site outlines: JRC Global Surface Water v1.4 maximum extent around seed points checked on OpenStreetMap.
 - Basin: HydroBASINS level 4, endorheic basin 2040085960 (58,374 km2).
 

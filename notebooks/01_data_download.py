@@ -33,7 +33,7 @@
 # | ERA5-Land monthly means | Copernicus CDS (account) | Copernicus licence | `pipeline/04a_era5land_monthly.py` |
 # | Climate DT generation 2 monthly means, IFS-FESOM and IFS-NEMO, 1990–2049 | DestinE upgraded access | DestinE terms: raw data not redistributed, basin means only | `pipeline/04b_climatedt_monthly.py` |
 #
-# Grid: HEALPix on the WGS84 ellipsoid (healpix-geo), NESTED; depth 17 (~49 m) for Landsat, depth 10 for the basin.
+# Grid: HEALPix on the WGS84 ellipsoid (healpix-geo), NESTED; depth 18 (~25 m) for Landsat, depth 10 for the basin.
 
 # %%
 import json

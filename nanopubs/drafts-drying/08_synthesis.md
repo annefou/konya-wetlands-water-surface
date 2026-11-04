@@ -38,7 +38,7 @@ Monitor these wetlands by how far they fill each spring against a fixed referenc
 ### Conditions under which the synthesis applies (textarea, required)
 
 ```
-Shallow, mostly precipitation- and groundwater-fed wetlands of the Konya Closed Basin, Central Anatolia (HydroBASINS endorheic basin 2040085960): Akgöl, Hotamış, Meke, Meyil and Bolluk, with Acıgöl (Karapınar) as control. Landsat 4-9 Collection 2 surface reflectance, NDWI, HEALPix cells of about 49 m, 1984-2025; ERA5-Land basin means for water years 1991-2025; Climate DT generation 2 (IFS-FESOM, IFS-NEMO) for the 2040s.
+Shallow, mostly precipitation- and groundwater-fed wetlands of the Konya Closed Basin, Central Anatolia (HydroBASINS endorheic basin 2040085960): Akgöl, Hotamış, Meke, Meyil and Bolluk, with Acıgöl (Karapınar) as control. Landsat 4-9 Collection 2 surface reflectance, NDWI, HEALPix cells of about 25 m, 1984-2025; ERA5-Land basin means for water years 1991-2025; Climate DT generation 2 (IFS-FESOM, IFS-NEMO) for the 2040s.
 ```
 
 <!-- field: limitations -->

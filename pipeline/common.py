@@ -7,7 +7,7 @@ from __future__ import annotations
 import numpy as np
 import healpix_geo.nested as hn
 
-DEPTH = 17                       # ~49 m cells (0.24 ha) on the WGS84 ellipsoid
+DEPTH = 18                       # ~25 m cells (0.06 ha) on the WGS84 ellipsoid; depth 17 (~50 m) lost thin water, see results/depth_sensitivity.json
 ELLIPSOID = "WGS84"
 WGS84_A = 6378137.0
 WGS84_F = 1 / 298.257223563

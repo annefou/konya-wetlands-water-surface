@@ -4,7 +4,7 @@
   "chain_shape": "paper-rooted",
   "source": {
     "repository": "https://github.com/annefou/konya-wetlands-water-surface",
-    "commit": "070778c39450996320e6955b724aa76d94505f83",
+    "commit": "49157084c22db0541f215ab4d78dfc6b486edee6",
     "figure": "figures/akgol_scenes.png"
   },
   "steps": [
@@ -77,7 +77,7 @@
         "label": "Test of the climate explanation for the Konya Closed Basin wetland decline with an ERA5-Land water balance, 1991-2025",
         "type": "https://w3id.org/sciencelive/o/terms/Replication-Study",
         "scope": "The statement that the decrease of water surface in Akgöl wetland matches the meteorological conditions. In scope: whether precipitation, evaporation, potential evaporation and summer temperature over the Konya Closed Basin changed over 1991-2025 in a way that explains the loss, and whether the collapsed wetlands still fill in years as wet as before. Out of scope: the period before 1991, the paper's station records, and a direct attribution to irrigation or groundwater abstraction, for which no data were used.",
-        "methodology": "ERA5-Land monthly means (precipitation, evaporation, potential evaporation, 2 m temperature) are sampled onto the 1,442 HEALPix cells (depth 10, about 6.4 km, WGS84 ellipsoid, nested) of the HydroBASINS endorheic basin 2040085960 and averaged over the basin per water year (October-September), 1991-2025. ERA5-Land has no irrigation, so its evaporation is that of the natural land surface. Trends are Theil-Sen slopes per decade with 95% intervals, plus 2016-2025 against 1991-2000. Wet-year test: for the four wetlands that stopped filling (Akgöl, Hotamış, Meke, Meyil), the spring maximum water area from every valid Landsat scene (NDWI > 0, HEALPix depth 17) as a percentage of its 1984-1995 reference, averaged over the wettest third of water years 1991-2005 and of 2011-2025. Climate DT generation 2 (IFS-FESOM, IFS-NEMO) gives the change to the 2040s against each model's own 1991-2020.",
+        "methodology": "ERA5-Land monthly means (precipitation, evaporation, potential evaporation, 2 m temperature) are sampled onto the 1,442 HEALPix cells (depth 10, about 6.4 km, WGS84 ellipsoid, nested) of the HydroBASINS endorheic basin 2040085960 and averaged over the basin per water year (October-September), 1991-2025. ERA5-Land has no irrigation, so its evaporation is that of the natural land surface. Trends are Theil-Sen slopes per decade with 95% intervals, plus 2016-2025 against 1991-2000. Wet-year test: for the four wetlands that stopped filling (Akgöl, Hotamış, Meke, Meyil), the spring maximum water area from every valid Landsat scene (NDWI > 0, HEALPix depth 18) as a percentage of its 1984-1995 reference, averaged over the wettest third of water years 1991-2005 and of 2011-2025. Climate DT generation 2 (IFS-FESOM, IFS-NEMO) gives the change to the 2040s against each model's own 1991-2020.",
         "deviation": "The paper compares the four image dates with temperature and precipitation at the Konya and Ereğli stations, 1971-2015, by inspection. This study uses a basin-wide reanalysis water balance from 1991, formal trends, and a comparison of wet years, and adds a climate projection to the 2040s.",
         "keywordSelection": [
           {
@@ -120,16 +120,18 @@
       "prefill": {
         "outcome": "konya-wetland-decline-meteorology-outcome",
         "label": "Rainfall does not explain the Konya wetland collapse: wet years no longer refill them; warming adds evaporative demand",
-        "date": "2026-10-23",
+        "repo": "https://doi.org/10.5281/zenodo.23942468",
+        "date": "2026-11-04",
         "validationStatus": "https://w3id.org/sciencelive/o/terms/PartiallySupported",
         "conclusion": "The weather alone does not account for the decline. Over the Konya Closed Basin, precipitation in water years 1991-2025 changed by -14 mm per decade (95% interval -36 to +8), not a significant trend, and the last decade was 10% drier than the 1990s. In the wettest years, with similar rainfall in both periods (446-555 mm in 1991-2005, 436-534 mm in 2011-2025), the four collapsed wetlands filled in spring to 67% of their 1984-1995 level before and to 23% after. Summer temperature rose by 0.49 degC per decade and potential evaporation by 33 mm per decade, both significant, so warming adds demand. The decline is consistent with warming and with rising water use, not with a fall in rainfall.",
-        "evidence": "ERA5-Land basin means over 1,442 HEALPix cells, water years 1991-2025, Theil-Sen per decade (95% interval): precipitation -14.4 mm (-36.3 to 7.9), mean 421 mm in 1991-2020; evaporation -3.9 mm (-17.3 to 5.7); P - E -6.2 mm (-18.3 to 7.0); potential evaporation +32.8 mm (1.3 to 66.4); June-August temperature +0.49 degC (0.17 to 0.77). 2016-2025 against 1991-2000: precipitation -10.0%, summer temperature +1.3 degC. Wet-year spring fill of Akgöl, Hotamış, Meke and Meyil: 67.4% (1995, 1996, 1997, 1999, 2002) against 22.6% (2011, 2015, 2017, 2019, 2022). Climate DT 2040s against 1991-2020: precipitation -16.3% (IFS-FESOM) and -14.3% (IFS-NEMO), summer temperature +2.85 and +2.34 degC. File: results/water_balance_claims.json.",
+        "evidence": "ERA5-Land basin means over 1,442 HEALPix cells, water years 1991-2025, Theil-Sen per decade (95% interval): precipitation -14.4 mm (-36.3 to 7.9), mean 421 mm in 1991-2020; evaporation -3.9 mm (-17.3 to 5.7); P - E -6.2 mm (-18.3 to 7.0); potential evaporation +32.8 mm (1.3 to 66.4); June-August temperature +0.49 degC (0.17 to 0.77). 2016-2025 against 1991-2000: precipitation -10.0%, summer temperature +1.3 degC. Wet-year spring fill of Akgöl, Hotamış, Meke and Meyil: 67.5% (1995, 1996, 1997, 1999, 2002) against 22.6% (2011, 2015, 2017, 2019, 2022). Climate DT 2040s against 1991-2020: precipitation -16.3% (IFS-FESOM) and -14.3% (IFS-NEMO), summer temperature +2.85 and +2.34 degC. File: results/water_balance_claims.json.",
         "confidenceLevel": "https://w3id.org/sciencelive/o/terms/Moderate",
         "limitations": "The record starts in 1991, after much of the decline at Akgöl (1987-1998); the paper's stations cover 1971-2015. ERA5-Land has no irrigation, groundwater abstraction or dams, so water use is inferred from what climate fails to explain, not measured; groundwater and irrigated-area data from DSİ would test it. Five wet years per period. Reanalysis precipitation over a semi-arid basin carries its own uncertainty, and Climate DT has biases against ERA5-Land (precipitation -19% for IFS-FESOM), so only its changes are used."
       },
       "provenance": {
         "outcome": "nanopubs/drafts-climate/05_outcome.md",
         "label": "nanopubs/drafts-climate/05_outcome.md",
+        "repo": "CITATION.cff",
         "date": "CITATION.cff",
         "validationStatus": "nanopubs/drafts-climate/05_outcome.md",
         "conclusion": "nanopubs/drafts-climate/05_outcome.md",

@@ -4,30 +4,30 @@
    "year": 1987,
    "paper_ha": 2958.4,
    "n_scenes": 3,
-   "min_ha": 1920.18,
-   "median_ha": 2999.4,
-   "max_ha": 3938.59,
+   "min_ha": 1968.8,
+   "median_ha": 3006.83,
+   "max_ha": 3859.6,
    "closest_date": "1987-06-09",
-   "closest_ha": 2999.4,
+   "closest_ha": 3006.83,
    "paper_within_range": true,
    "spread_thr_-0.1_+0.1_at_closest": [
-    3504.87,
-    2536.0
+    3445.31,
+    2612.26
    ]
   },
   {
    "year": 1998,
    "paper_ha": 1153.9,
    "n_scenes": 6,
-   "min_ha": 44.78,
-   "median_ha": 189.39499999999998,
-   "max_ha": 730.86,
+   "min_ha": 59.94,
+   "median_ha": 219.64499999999998,
+   "max_ha": 827.66,
    "closest_date": "1998-06-07",
-   "closest_ha": 730.86,
+   "closest_ha": 827.66,
    "paper_within_range": false,
    "spread_thr_-0.1_+0.1_at_closest": [
-    1086.64,
-    582.66
+    1151.9,
+    686.14
    ]
   },
   {
@@ -35,14 +35,14 @@
    "paper_ha": 12.7,
    "n_scenes": 8,
    "min_ha": 0.0,
-   "median_ha": 0.245,
-   "max_ha": 19.3,
-   "closest_date": "2007-05-15",
-   "closest_ha": 19.3,
+   "median_ha": 1.08,
+   "max_ha": 27.96,
+   "closest_date": "2007-05-31",
+   "closest_ha": 9.28,
    "paper_within_range": true,
    "spread_thr_-0.1_+0.1_at_closest": [
-    100.95,
-    10.39
+    274.63,
+    0.25
    ]
   },
   {
@@ -50,14 +50,14 @@
    "paper_ha": 117.2,
    "n_scenes": 13,
    "min_ha": 0.0,
-   "median_ha": 42.31,
-   "max_ha": 420.85,
-   "closest_date": "2017-06-11",
-   "closest_ha": 128.66,
+   "median_ha": 49.48,
+   "max_ha": 429.39,
+   "closest_date": "2017-06-27",
+   "closest_ha": 94.82,
    "paper_within_range": true,
    "spread_thr_-0.1_+0.1_at_closest": [
-    169.73,
-    103.67
+    127.48,
+    81.46
    ]
   }
  ],
@@ -74,24 +74,24 @@
    "years_used": 41
   },
   "akgol": {
-   "median_doy_1996_2000": 164.0,
+   "median_doy_1996_2000": 185.0,
    "median_doy_2016_2020": 165.0,
-   "change_days": 1.0,
-   "theil_sen_days_per_decade": -41.4,
+   "change_days": -20.0,
+   "theil_sen_days_per_decade": -44.2,
    "ci95": [
-    -67.4,
-    -18.8
+    -69.3,
+    -23.6
    ],
    "years_used": 39
   },
   "bolluk": {
-   "median_doy_1996_2000": 236.5,
+   "median_doy_1996_2000": 149.5,
    "median_doy_2016_2020": 366.0,
-   "change_days": 129.5,
+   "change_days": 216.5,
    "theil_sen_days_per_decade": 0.0,
    "ci95": [
-    -42.5,
-    26.3
+    -35.9,
+    30.0
    ],
    "years_used": 21
   },
@@ -99,21 +99,21 @@
    "median_doy_1996_2000": 121.0,
    "median_doy_2016_2020": 119.0,
    "change_days": -2.0,
-   "theil_sen_days_per_decade": -23.6,
+   "theil_sen_days_per_decade": -23.5,
    "ci95": [
-    -43.7,
-    -9.5
+    -45.2,
+    -8.6
    ],
    "years_used": 41
   },
   "meke": {
    "median_doy_1996_2000": 145.0,
-   "median_doy_2016_2020": 162.0,
-   "change_days": 17.0,
-   "theil_sen_days_per_decade": -61.8,
+   "median_doy_2016_2020": 165.0,
+   "change_days": 20.0,
+   "theil_sen_days_per_decade": -58.3,
    "ci95": [
-    -78.3,
-    -16.4
+    -77.3,
+    -9.1
    ],
    "years_used": 41
   },
@@ -121,10 +121,10 @@
    "median_doy_1996_2000": 107.0,
    "median_doy_2016_2020": 139.0,
    "change_days": 32.0,
-   "theil_sen_days_per_decade": 0.0,
+   "theil_sen_days_per_decade": 1.0,
    "ci95": [
-    -9.6,
-    10.0
+    -6.7,
+    14.1
    ],
    "years_used": 41
   }
@@ -132,39 +132,39 @@
  "series": {
   "acigol_k": {
    "years": 41,
-   "scenes": 495,
-   "spring_max_1984_1995_median_ha": 108.9,
-   "spring_max_2015_2025_median_ha": 97.2
+   "scenes": 492,
+   "spring_max_1984_1995_median_ha": 110.5,
+   "spring_max_2015_2025_median_ha": 98.7
   },
   "akgol": {
    "years": 41,
-   "scenes": 455,
-   "spring_max_1984_1995_median_ha": 3435.95,
-   "spring_max_2015_2025_median_ha": 282.3
+   "scenes": 451,
+   "spring_max_1984_1995_median_ha": 3423.05,
+   "spring_max_2015_2025_median_ha": 299.0
   },
   "bolluk": {
    "years": 31,
    "scenes": 135,
-   "spring_max_1984_1995_median_ha": 1050.15,
-   "spring_max_2015_2025_median_ha": 215.2
+   "spring_max_1984_1995_median_ha": 1053.9,
+   "spring_max_2015_2025_median_ha": 228.1
   },
   "hotamis": {
    "years": 41,
-   "scenes": 959,
-   "spring_max_1984_1995_median_ha": 1217.4,
-   "spring_max_2015_2025_median_ha": 24.5
+   "scenes": 958,
+   "spring_max_1984_1995_median_ha": 1253.9,
+   "spring_max_2015_2025_median_ha": 24.6
   },
   "meke": {
    "years": 41,
-   "scenes": 548,
-   "spring_max_1984_1995_median_ha": 52.6,
-   "spring_max_2015_2025_median_ha": 2.2
+   "scenes": 545,
+   "spring_max_1984_1995_median_ha": 55.099999999999994,
+   "spring_max_2015_2025_median_ha": 2.9
   },
   "meyil": {
    "years": 41,
-   "scenes": 1427,
-   "spring_max_1984_1995_median_ha": 6.7,
-   "spring_max_2015_2025_median_ha": 1.7
+   "scenes": 1429,
+   "spring_max_1984_1995_median_ha": 7.75,
+   "spring_max_2015_2025_median_ha": 2.7
   }
  }
 }
