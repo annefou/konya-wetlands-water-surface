@@ -67,3 +67,9 @@ rule depth_sensitivity:             # depth 17 vs 18 vs native 30 m pixels, Akg√
     input: f"{W}/landsat/scenes.csv"
     output: "results/depth_sensitivity.json"
     shell: "python pipeline/91_depth_sensitivity.py {W}"
+
+
+rule spei:                          # wet years by SPEI (Vicente-Serrano et al. 2010), robustness of the wet-year test
+    input: f"{W}/wb/era5land_monthly_1990_2025.nc", "results/site_years.csv", "results/water_balance_claims.json"
+    output: "results/spei_wet_years.json", "results/spei_water_years.csv"
+    shell: "python pipeline/04d_spei.py {W}"
