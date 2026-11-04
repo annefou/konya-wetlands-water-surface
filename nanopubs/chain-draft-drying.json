@@ -4,7 +4,7 @@
   "chain_shape": "paper-rooted",
   "source": {
     "repository": "https://github.com/annefou/konya-wetlands-water-surface",
-    "commit": "4964bfa9b78b25a5a7e8216b3b76d9f62496be7c",
+    "commit": "e6f8b2eaa67d113f88a0e9ef981839de94d2e2f9",
     "figure": "figures/akgol_scenes.png"
   },
   "steps": [
@@ -125,7 +125,7 @@
       "prefill": {
         "outcome": "konya-wetlands-earlier-drying-outcome",
         "label": "Konya wetlands dry earlier over 1984-2025 at three of five sites; the larger change is that they no longer fill",
-        "repo": "https://doi.org/10.5281/zenodo.23944996",
+        "repo": "https://doi.org/10.5281/zenodo.23948920",
         "date": "2026-11-04",
         "validationStatus": "https://w3id.org/sciencelive/o/terms/PartiallySupported",
         "conclusion": "Over 1984-2025 the drying date advanced at Akgöl (44 days per decade), Hotamış (24) and Meke (58), all significant; Meyil and Bolluk show no trend and the control crater lake never dries. Between the paper's windows the median drying date advanced only at Akgöl (day 185 to 165), not at Hotamış (121 to 119), Meke (145 to 165) or Meyil (107 to 139). The reason is a larger change: the wetlands stopped filling. Akgöl filled to half its 1984-1995 spring level in every year of the 1980s, 40% of the 1990s and never since 2000; Hotamış never since 2010; Meke and Meyil in no year of the 2020s. Earlier drying is supported as a long-term trend; the dominant signal is the failure to fill.",
