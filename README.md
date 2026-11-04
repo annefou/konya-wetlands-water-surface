@@ -4,7 +4,7 @@
 [![Jupyter Book](https://github.com/annefou/konya-wetlands-water-surface/actions/workflows/jupyter-book.yml/badge.svg)](https://annefou.github.io/konya-wetlands-water-surface/)
 [![Docker](https://github.com/annefou/konya-wetlands-water-surface/actions/workflows/docker.yml/badge.svg)](https://github.com/annefou/konya-wetlands-water-surface/pkgs/container/konya-wetlands-water-surface)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/DOI/{{ZENODO_DOI}}.svg)]({{ZENODO_DOI}})
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23942467.svg)](https://doi.org/10.5281/zenodo.23942467)
 [![FAIR4RS](https://img.shields.io/badge/FAIR4RS-conformant-brightgreen)](docs/fair4rs-checklist.md)
 [![FORRT](https://img.shields.io/badge/FORRT-replication-blue)](https://forrt.org/)
 [![Science Live](https://img.shields.io/badge/Science%20Live-nanopub%20chain-purple)](nanopubs/PUBLISHED.md)
@@ -237,7 +237,7 @@ For lower-level nanopub work — retraction, superseding, batch publishing — s
 
 If you use this work, please cite both:
 
-- This software: [`CITATION.cff`](CITATION.cff) → DOI [{{ZENODO_DOI}}]({{ZENODO_DOI}})
+- This software: [`CITATION.cff`](CITATION.cff) → DOI [10.5281/zenodo.23942467](https://doi.org/10.5281/zenodo.23942467)
 - The original paper: [10.17501/iccc.2018.2102](https://doi.org/10.17501/iccc.2018.2102)
 
 ## Acknowledgements
