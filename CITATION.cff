@@ -29,6 +29,12 @@ identifiers:
   value: 10.5281/zenodo.23942467
   description: Concept DOI (resolves to the latest version) — cite the project
 - type: doi
+  value: 10.5281/zenodo.23944996
+  description: Version DOI for v0.1.1 — pins this exact release; cite this from nanopubs
+- type: swh
+  value: swh:1:rev:49ec95d36b4bda07b0afdc26632c370e65e78d5d;origin=https://github.com/annefou/konya-wetlands-water-surface
+  description: Software Heritage ID of the v0.1.1 source tree
+- type: doi
   value: 10.5281/zenodo.23942468
   description: Version DOI for v0.1.0 — pins this exact release; cite this from nanopubs
 - type: swh

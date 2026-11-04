@@ -89,10 +89,10 @@
         }
       ],
       "identifier": [
-        "https://doi.org/10.5281/zenodo.23942468",
-        "swh:1:rev:77a0de4257531ea9563d1d8dcd2725d7600c0a37;origin=https://github.com/annefou/konya-wetlands-water-surface"
+        "https://doi.org/10.5281/zenodo.23944996",
+        "swh:1:rev:49ec95d36b4bda07b0afdc26632c370e65e78d5d;origin=https://github.com/annefou/konya-wetlands-water-surface"
       ],
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "@id": "https://orcid.org/0000-0002-1784-2920",
