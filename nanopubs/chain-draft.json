@@ -4,7 +4,7 @@
   "chain_shape": "paper-rooted",
   "source": {
     "repository": "https://github.com/annefou/konya-wetlands-water-surface",
-    "commit": "49157084c22db0541f215ab4d78dfc6b486edee6",
+    "commit": "4964bfa9b78b25a5a7e8216b3b76d9f62496be7c",
     "figure": "figures/akgol_scenes.png"
   },
   "steps": [
@@ -128,7 +128,7 @@
       "prefill": {
         "outcome": "akgol-water-surface-loss-outcome",
         "label": "Akgöl's loss of open water reproduced with every Landsat scene 1984-2025; it has not refilled since 2000",
-        "repo": "https://doi.org/10.5281/zenodo.23942468",
+        "repo": "https://doi.org/10.5281/zenodo.23944996",
         "date": "2026-11-04",
         "validationStatus": "https://w3id.org/sciencelive/o/terms/Validated",
         "conclusion": "The paper's loss of open water at Akgöl is reproduced. Scenes close to the paper's values exist for 1987 (3007 ha against 2958.4), 2007 (9.3 against 12.7) and 2017 (94.8 against 117.2), a loss of 96.8% from 1987 to 2017 against the paper's 96%. Using every valid scene, the median spring maximum fell from 3423 ha in 1984-1995 to 299 ha in 2015-2025, a loss of 91%, and Akgöl has not filled to half its 1984-1995 level in any year since 2000. Only the paper's 1998 value (1153.9 ha) is not matched at its threshold: our valid 1998 scenes peak at 828 ha (1152 ha at NDWI > -0.1). Single images per year hide a two-fold seasonal range (3860 ha in April and 1969 ha in July 1987), but not the loss.",

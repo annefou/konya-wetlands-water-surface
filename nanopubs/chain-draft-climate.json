@@ -4,7 +4,7 @@
   "chain_shape": "paper-rooted",
   "source": {
     "repository": "https://github.com/annefou/konya-wetlands-water-surface",
-    "commit": "49157084c22db0541f215ab4d78dfc6b486edee6",
+    "commit": "4964bfa9b78b25a5a7e8216b3b76d9f62496be7c",
     "figure": "figures/akgol_scenes.png"
   },
   "steps": [
@@ -120,7 +120,7 @@
       "prefill": {
         "outcome": "konya-wetland-decline-meteorology-outcome",
         "label": "Rainfall does not explain the Konya wetland collapse: wet years no longer refill them; warming adds evaporative demand",
-        "repo": "https://doi.org/10.5281/zenodo.23942468",
+        "repo": "https://doi.org/10.5281/zenodo.23944996",
         "date": "2026-11-04",
         "validationStatus": "https://w3id.org/sciencelive/o/terms/PartiallySupported",
         "conclusion": "The weather alone does not account for the decline. Over the Konya Closed Basin, precipitation in water years 1991-2025 changed by -14 mm per decade (95% interval -36 to +8), not a significant trend, and the last decade was 10% drier than the 1990s. In the wettest years, with similar rainfall in both periods (446-555 mm in 1991-2005, 436-534 mm in 2011-2025), the four collapsed wetlands filled in spring to 67% of their 1984-1995 level before and to 23% after. Summer temperature rose by 0.49 degC per decade and potential evaporation by 33 mm per decade, both significant, so warming adds demand. The decline is consistent with warming and with rising water use, not with a fall in rainfall.",
