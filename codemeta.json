@@ -3,7 +3,7 @@
   "@type": "SoftwareSourceCode",
   "name": "konya-wetlands-water-surface",
   "description": "Water surface of Konya Closed Basin wetlands (Akgöl, Acıgöl) 1984–2025: replication of Musaoğlu et al. 2018 with every Landsat scene on HEALPix (healpix-geo, WGS84), tested against JRC Global Surface Water. DRAFT, not reviewed.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "dateCreated": "2026-10-23",
   "dateModified": "2026-11-04",
   "license": "https://spdx.org/licenses/MIT",
