@@ -16,48 +16,30 @@
 # %% [markdown]
 # # 04 — Figures
 #
-# This notebook produces the figures used in the Jupyter Book. Each figure is
-# saved to `figures/` as a high-DPI PNG **and** displayed inline (so MyST
-# renders the figure inside the Jupyter Book — see
-# `docs/cicd-conventions.md`).
-#
-# **Inline display rule:** always pair `fig.savefig(...)` with `plt.show()`.
-# Without `plt.show()`, MyST builds an empty cell. Don't use
-# `matplotlib.use('Agg')` — it blocks inline display.
-#
-# **Layout check:** call `assert_layout(fig)` (`scripts/figcheck.py`) before
-# `fig.savefig(...)`. It fails the notebook — and so the pipeline — when two text
-# labels overlap or nearly touch, or when a legend covers data. For labels at the
-# end of lines, `spread_labels(ax, [(x, y, text), ...])` keeps them apart; call it
-# after `fig.tight_layout()`.
-
-# %%
-import sys
-from pathlib import Path
-
-import matplotlib.pyplot as plt
-import pandas as pd
-
-sys.path.insert(0, str(Path("../scripts").resolve()))
-from figcheck import assert_layout  # noqa: E402
-
-# %%
-RESULTS_DIR = Path("../results")
-FIGURES_DIR = Path("../figures")
-FIGURES_DIR.mkdir(parents=True, exist_ok=True)
+# Written by the pipeline (`pipeline/02_analyse.py`, `pipeline/04c_water_balance.py`, `pipeline/99_doc_figures.py`)
+# and committed in `figures/`.
 
 # %% [markdown]
-# ## Main result figure
-
-# %%
-# summary = pd.read_csv(RESULTS_DIR / "summary.csv")
-
-# fig, ax = plt.subplots(figsize=(8, 5))
-# ax.bar(summary["metric"], summary["value"])
-# ax.set_title("Replication headline result")
-# ax.set_ylabel("Value")
-# fig.tight_layout()
-# assert_layout(fig)  # no overlapping labels, no legend over data
+# ## Akgöl: every valid scene against the paper's four values
+# One image per year hides a two-fold seasonal range (3,939 ha on 22 April and 1,920 ha on 27 July 1987).
+# ![Akgöl, every scene](../figures/akgol_scenes.png)
 #
-# fig.savefig(FIGURES_DIR / "main_result.png", dpi=150, bbox_inches="tight")
-# plt.show()  # required for MyST inline display
+# ## Spring and summer water surface per site
+# ![Spring and summer per site](../figures/sites_spring_summer.png)
+#
+# ## Drying date per site
+# ![Drying date](../figures/sites_drying_doy.png)
+#
+# ## Share of years each wetland fills, per decade
+# ![Fill by decade](../figures/doc_fill.png)
+#
+# ## Basin water balance and wetland filling
+# ![Water balance](../figures/water_balance.png)
+
+# %% [markdown]
+# ## Limits
+# - NDWI misses bright or turbid water in some scenes (Acıgöl reads 0 ha from January to June 1996), so the reference
+#   is the median of yearly spring maxima, not single scenes. MNDWI would be more robust for the crater lakes; the
+#   replication keeps the paper's NDWI.
+# - NDWI on salt crust and shallow turbid water is uncertain; Tuz Gölü is separated with a 0.45° circle.
+# - Water surface only: no depth, salinity or ecological condition.
