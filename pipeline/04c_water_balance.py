@@ -10,7 +10,8 @@ Water year = October to September, labelled by its ending year (1991 = Oct 1990 
    (June-August) temperature; Theil-Sen slope per decade with 95% interval, and 2016-2025 against 1991-2000.
 2. Did the wetlands still fill in wet years? Spring fill (spring maximum as % of the 1984-1995 reference,
    results/site_years.csv) of the four sites that stopped filling, in the wettest third of water years
-   1991-2005 against the wettest third of 2011-2025.
+   1991-2005 against the wettest third of 2011-2025. Robustness: one fixed threshold for both periods, the wettest
+   third of 1991-2020 (WMO normal) and of 1991-2025 (claims["wet_year_fill_fixed_threshold"]).
 3. Climate DT: each model's 2040-2049 mean against its own 1991-2020 mean (changes only, as for the jerboa test),
    and its 1991-2020 bias against ERA5-Land.
 Writes results/water_balance_annual.csv (basin means), results/water_balance_claims.json,
@@ -112,6 +113,19 @@ def main():
                                                "precip_mm": [round(float(e5.loc[y, "P"])) for y in wet],
                                                "mean_spring_fill_pct_4_sites": round(float(f.mean()), 1),
                                                "years_with_fill_data": int(len(f))}
+    # 2b. robustness: one fixed threshold for both periods (the wettest third of a common reference), so a drier
+    #     later period cannot lower its own bar for "wet"
+    for ref_name, (r0, r1) in (("1991-2020", (1991, 2020)), ("1991-2025", (1991, 2025))):
+        thr = float(e5["P"].loc[r0:r1].quantile(2 / 3))
+        res = {"threshold_mm": round(thr), "reference": f"wettest third of water years {ref_name}"}
+        for (a, b) in ((1991, 2005), (2011, 2025)):
+            p = e5["P"].loc[a:b]
+            wet = p[p >= thr].index
+            f = fill.reindex(wet).dropna()
+            res[f"{a}-{b}"] = {"wet_years": [int(y) for y in wet], "precip_mm": [round(float(e5.loc[y, "P"])) for y in wet],
+                               "mean_spring_fill_pct_4_sites": round(float(f.mean()), 1) if len(f) else None,
+                               "years_with_fill_data": int(len(f))}
+        claims.setdefault("wet_year_fill_fixed_threshold", {})[ref_name] = res
     # 3. Climate DT
     dt = {}
     for m in MODELS:

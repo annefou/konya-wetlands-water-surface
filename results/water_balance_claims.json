@@ -132,5 +132,85 @@
     "T_JJA_degC": 2.34
    }
   }
+ },
+ "wet_year_fill_fixed_threshold": {
+  "1991-2020": {
+   "threshold_mm": 439,
+   "reference": "wettest third of water years 1991-2020",
+   "1991-2005": {
+    "wet_years": [
+     1995,
+     1996,
+     1997,
+     1999,
+     2002
+    ],
+    "precip_mm": [
+     463,
+     484,
+     451,
+     446,
+     555
+    ],
+    "mean_spring_fill_pct_4_sites": 67.5,
+    "years_with_fill_data": 5
+   },
+   "2011-2025": {
+    "wet_years": [
+     2011,
+     2015,
+     2019,
+     2022
+    ],
+    "precip_mm": [
+     472,
+     534,
+     530,
+     461
+    ],
+    "mean_spring_fill_pct_4_sites": 21.8,
+    "years_with_fill_data": 4
+   }
+  },
+  "1991-2025": {
+   "threshold_mm": 436,
+   "reference": "wettest third of water years 1991-2025",
+   "1991-2005": {
+    "wet_years": [
+     1995,
+     1996,
+     1997,
+     1999,
+     2002
+    ],
+    "precip_mm": [
+     463,
+     484,
+     451,
+     446,
+     555
+    ],
+    "mean_spring_fill_pct_4_sites": 67.5,
+    "years_with_fill_data": 5
+   },
+   "2011-2025": {
+    "wet_years": [
+     2011,
+     2015,
+     2017,
+     2019,
+     2022
+    ],
+    "precip_mm": [
+     472,
+     534,
+     436,
+     530,
+     461
+    ],
+    "mean_spring_fill_pct_4_sites": 22.6,
+    "years_with_fill_data": 5
+   }
+  }
  }
 }
