@@ -4,7 +4,7 @@
   "chain_shape": "paper-rooted",
   "source": {
     "repository": "https://github.com/annefou/konya-wetlands-water-surface",
-    "commit": "30c64e0eca9004f80b34b63a72fcbf3957ad2038",
+    "commit": "070778c39450996320e6955b724aa76d94505f83",
     "figure": "figures/akgol_scenes.png"
   },
   "steps": [
